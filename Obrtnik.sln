@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Obrtnik", "Obrtnik\Obrtnik.csproj", "{F685152B-D190-4D8A-AE1B-F4CAB1DFAB5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modules", "Modules\Modules.csproj", "{617A479E-CDC3-4C30-B3C6-C3E25593BE48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{CF7D40A0-A6EC-4821-B3CC-9561613C6224}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F685152B-D190-4D8A-AE1B-F4CAB1DFAB5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F685152B-D190-4D8A-AE1B-F4CAB1DFAB5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F685152B-D190-4D8A-AE1B-F4CAB1DFAB5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F685152B-D190-4D8A-AE1B-F4CAB1DFAB5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{617A479E-CDC3-4C30-B3C6-C3E25593BE48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{617A479E-CDC3-4C30-B3C6-C3E25593BE48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{617A479E-CDC3-4C30-B3C6-C3E25593BE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{617A479E-CDC3-4C30-B3C6-C3E25593BE48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF7D40A0-A6EC-4821-B3CC-9561613C6224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF7D40A0-A6EC-4821-B3CC-9561613C6224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF7D40A0-A6EC-4821-B3CC-9561613C6224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF7D40A0-A6EC-4821-B3CC-9561613C6224}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A8FD99D-162E-4511-BC89-25312AFF29B4}
+	EndGlobalSection
+EndGlobal
