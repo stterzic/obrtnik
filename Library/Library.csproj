@@ -44,6 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Helpers\Common.cs" />
+    <Compile Include="Helpers\SafeDataReader.cs" />
+    <Compile Include="Helpers\SqLite.cs" />
+    <Compile Include="Library\Obrt.cs" />
     <Compile Include="Library\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

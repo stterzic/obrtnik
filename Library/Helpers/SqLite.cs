@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modules
+namespace Library.Helpers
 {
-    public class Class1
+    public static class SqLite
     {
-
+        public static string DBConnectionString = @"";
     }
 }

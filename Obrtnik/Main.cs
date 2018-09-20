@@ -41,7 +41,7 @@ namespace Obrtnik
                 splashScreenManager.SetWaitFormDescription("Učitavanje ...");
 
             }
-            //Helpers.Common.spmanager = splashScreenManager;
+           
             switch (ListType)
             {
                 //case "dbConnection":
