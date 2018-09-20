@@ -33,10 +33,13 @@ namespace Modules.Editors
             sqlite_conn = new SQLiteConnection("Data Source=ObrtnikDatabase.db;Version=3;New=True;Compress=True;");
             sqlite_conn.Open();
             sqlite_cmd = sqlite_conn.CreateCommand();
-            sqlite_cmd.CommandText = "CREATE TABLE Users (Id INTEGER PRIMARY KEY AUTOINCREMENT, Username varchar(100), Password varchar(100));";
+            sqlite_cmd.CommandText = "CREATE TABLE Users (Username varchar(100), Password varchar(100));";
             sqlite_cmd.ExecuteNonQuery();
 
-            sqlite_cmd.CommandText = "INSERT INTO test (Username, Password) VALUES ('"+txtUsername+"', '"+txtPassword+"');";
+            sqlite_cmd.CommandText = "INSERT INTO Users (Username, Password) VALUES ('" + txtUsername+"', '"+txtPassword+"');";
+            sqlite_cmd.ExecuteNonQuery();
+            sqlite_conn.Close();
+            this.Close();
         }
     }
 }
