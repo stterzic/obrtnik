@@ -47,6 +47,8 @@
             this.ribbonPageGroupProizvod = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.splashScreenManager = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Obrtnik.WaitForm), true, true);
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnObrt = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,9 +62,10 @@
             this.barButtonItem2,
             this.barButtonItem3,
             this.barButtonItem4,
-            this.barButtonItem5});
+            this.barButtonItem5,
+            this.btnObrt});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 8;
+            this.ribbonControl1.MaxItemId = 9;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageUpute,
@@ -133,6 +136,7 @@
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup5,
             this.ribbonPageGroupBaza});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Osnovni podaci";
@@ -195,9 +199,24 @@
             this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Usluge";
             // 
-            // splashScreenManager1
+            // splashScreenManager
             // 
             this.splashScreenManager.ClosingDelay = 500;
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnObrt);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.ShowCaptionButton = false;
+            // 
+            // btnObrt
+            // 
+            this.btnObrt.Caption = "Osnovni podaci o obrtu";
+            this.btnObrt.Glyph = ((System.Drawing.Image)(resources.GetObject("btnObrt.Glyph")));
+            this.btnObrt.Id = 8;
+            this.btnObrt.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnObrt.LargeGlyph")));
+            this.btnObrt.Name = "btnObrt";
+            this.btnObrt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnObrt_ItemClick);
             // 
             // Main
             // 
@@ -235,6 +254,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupBaza;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager;
+        private DevExpress.XtraBars.BarButtonItem btnObrt;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
     }
 }
 

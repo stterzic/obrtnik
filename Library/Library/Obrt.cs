@@ -54,7 +54,7 @@ namespace Library
 
         #region Execute
 
-        public void InsertData(object criteria)
+        public void InsertData()
         {
             using (SQLiteConnection cn = new SQLiteConnection(Helpers.SqLite.DBConnectionString))
             {

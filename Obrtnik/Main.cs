@@ -25,14 +25,13 @@ namespace Obrtnik
         private void Login()
         {
             DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm(false);
-            bool egg = false;
             using (Login login = new Login())
             {
                 login.ShowDialog();
             }
         }
 
-        public void MainOperator(string ListType, ActionType typ)
+        public void MainOperator(string ListType)
         {
             if (!splashScreenManager.IsSplashFormVisible)
             {
@@ -44,10 +43,10 @@ namespace Obrtnik
            
             switch (ListType)
             {
-                //case "dbConnection":
-                //    Modules.Tools.DbConnection db = new Modules.Tools.DbConnection();
-                //    db.Show();
-                //    break;
+                case "Obrt":
+                    Modules.Editors.ObrtPodaci obrtPodaci = new Modules.Editors.ObrtPodaci();
+                    obrtPodaci.Show();
+                    break;
                 default:
                     break;
             }
@@ -55,6 +54,11 @@ namespace Obrtnik
             {
                 splashScreenManager.CloseWaitForm();
             }
+        }
+
+        private void btnObrt_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MainOperator("Obrt");
         }
     }
 }

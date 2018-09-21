@@ -60,6 +60,12 @@
     <Compile Include="Modules\Editors\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Editors\ObrtPodaci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Editors\ObrtPodaci.Designer.cs">
+      <DependentUpon>ObrtPodaci.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Editors\Prihod.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <EmbeddedResource Include="Modules\Editors\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Editors\ObrtPodaci.resx">
+      <DependentUpon>ObrtPodaci.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Editors\Prihod.resx">
       <DependentUpon>Prihod.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +109,9 @@
       <Project>{cf7d40a0-a6ec-4821-b3cc-9561613c6224}</Project>
       <Name>Library</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Library.Obrt.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
