@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.PrihodiListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKupacNaziv = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAdresa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMjesto = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,13 +53,16 @@
             this.colBrojUplatnice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDatumUplate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPoSd = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrihodiListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
             // 
             this.gridControl1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.gridControl1.DataSource = this.PrihodiListBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.EmbeddedNavigator.Buttons.Append.Hint = "New";
             this.gridControl1.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
@@ -70,20 +76,25 @@
             this.gridControl1.EmbeddedNavigator.Buttons.PrevPage.Visible = false;
             this.gridControl1.EmbeddedNavigator.Buttons.Remove.Hint = "Delete";
             this.gridControl1.EmbeddedNavigator.TextStringFormat = "";
-            this.gridControl1.EmbeddedNavigator.UseWaitCursor = false;
+            this.gridControl1.EmbeddedNavigator.ButtonClick += new DevExpress.XtraEditors.NavigatorButtonClickEventHandler(this.gridControl1_EmbeddedNavigator_ButtonClick);
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1253, 681);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.UseEmbeddedNavigator = true;
-            this.gridControl1.UseWaitCursor = false;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
+            // 
+            // PrihodiListBindingSource
+            // 
+            this.PrihodiListBindingSource.DataSource = typeof(Library.PrihodiList);
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.Id,
             this.colKupacNaziv,
             this.colAdresa,
             this.colMjesto,
@@ -114,6 +125,12 @@
             this.gridView1.OptionsView.ShowPreview = true;
             this.gridView1.OptionsView.ShowViewCaption = true;
             this.gridView1.ViewCaption = "Lista prihoda";
+            // 
+            // Id
+            // 
+            this.Id.Caption = "Id";
+            this.Id.FieldName = "Id";
+            this.Id.Name = "Id";
             // 
             // colKupacNaziv
             // 
@@ -263,6 +280,7 @@
             this.Name = "Prihodi_Lista";
             this.Size = new System.Drawing.Size(1253, 681);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrihodiListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -292,5 +310,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colBrojUplatnice;
         private DevExpress.XtraGrid.Columns.GridColumn colDatumUplate;
         private DevExpress.XtraGrid.Columns.GridColumn colPoSd;
+        private System.Windows.Forms.BindingSource PrihodiListBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn Id;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

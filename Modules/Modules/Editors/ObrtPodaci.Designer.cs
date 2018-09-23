@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnPickImage = new DevExpress.XtraEditors.SimpleButton();
+            this.txtImagePath = new DevExpress.XtraEditors.TextEdit();
+            this.logoPictureBox = new System.Windows.Forms.PictureBox();
+            this.obrtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.txtDjelatnost = new DevExpress.XtraEditors.TextEdit();
             this.txtBanka = new DevExpress.XtraEditors.TextEdit();
@@ -49,16 +53,15 @@
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtImagePath = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnPickImage = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.obrtBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtImagePath.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obrtBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDjelatnost.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBanka.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIban.Properties)).BeginInit();
@@ -77,12 +80,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtImagePath.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obrtBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -106,6 +106,39 @@
             this.layoutControl1.Size = new System.Drawing.Size(800, 478);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnPickImage
+            // 
+            this.btnPickImage.Location = new System.Drawing.Point(712, 278);
+            this.btnPickImage.Name = "btnPickImage";
+            this.btnPickImage.Size = new System.Drawing.Size(76, 22);
+            this.btnPickImage.StyleController = this.layoutControl1;
+            this.btnPickImage.TabIndex = 14;
+            this.btnPickImage.Text = "Browse";
+            this.btnPickImage.Click += new System.EventHandler(this.btnPickImage_Click);
+            // 
+            // txtImagePath
+            // 
+            this.txtImagePath.Location = new System.Drawing.Point(74, 278);
+            this.txtImagePath.Name = "txtImagePath";
+            this.txtImagePath.Size = new System.Drawing.Size(634, 20);
+            this.txtImagePath.StyleController = this.layoutControl1;
+            this.txtImagePath.TabIndex = 13;
+            // 
+            // logoPictureBox
+            // 
+            this.logoPictureBox.BackColor = System.Drawing.Color.White;
+            this.logoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.obrtBindingSource, "Logo", true));
+            this.logoPictureBox.Location = new System.Drawing.Point(12, 320);
+            this.logoPictureBox.Name = "logoPictureBox";
+            this.logoPictureBox.Size = new System.Drawing.Size(776, 118);
+            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoPictureBox.TabIndex = 12;
+            this.logoPictureBox.TabStop = false;
+            // 
+            // obrtBindingSource
+            // 
+            this.obrtBindingSource.DataSource = typeof(Library.Obrt);
             // 
             // btnSave
             // 
@@ -297,21 +330,6 @@
             this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "openFileDialog1";
-            // 
-            // logoPictureBox
-            // 
-            this.logoPictureBox.BackColor = System.Drawing.Color.White;
-            this.logoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.obrtBindingSource, "Logo", true));
-            this.logoPictureBox.Location = new System.Drawing.Point(12, 320);
-            this.logoPictureBox.Name = "logoPictureBox";
-            this.logoPictureBox.Size = new System.Drawing.Size(776, 118);
-            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoPictureBox.TabIndex = 12;
-            this.logoPictureBox.TabStop = false;
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.logoPictureBox;
@@ -322,14 +340,6 @@
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(59, 13);
             // 
-            // txtImagePath
-            // 
-            this.txtImagePath.Location = new System.Drawing.Point(74, 278);
-            this.txtImagePath.Name = "txtImagePath";
-            this.txtImagePath.Size = new System.Drawing.Size(634, 20);
-            this.txtImagePath.StyleController = this.layoutControl1;
-            this.txtImagePath.TabIndex = 13;
-            // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.txtImagePath;
@@ -338,16 +348,6 @@
             this.layoutControlItem10.Size = new System.Drawing.Size(700, 26);
             this.layoutControlItem10.Text = "Logo path";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(59, 13);
-            // 
-            // btnPickImage
-            // 
-            this.btnPickImage.Location = new System.Drawing.Point(712, 278);
-            this.btnPickImage.Name = "btnPickImage";
-            this.btnPickImage.Size = new System.Drawing.Size(76, 22);
-            this.btnPickImage.StyleController = this.layoutControl1;
-            this.btnPickImage.TabIndex = 14;
-            this.btnPickImage.Text = "Browse";
-            this.btnPickImage.Click += new System.EventHandler(this.btnPickImage_Click);
             // 
             // layoutControlItem11
             // 
@@ -358,9 +358,9 @@
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
-            // obrtBindingSource
+            // openFileDialog
             // 
-            this.obrtBindingSource.DataSource = typeof(Library.Obrt);
+            this.openFileDialog.FileName = "openFileDialog1";
             // 
             // ObrtPodaci
             // 
@@ -369,9 +369,13 @@
             this.ClientSize = new System.Drawing.Size(800, 478);
             this.Controls.Add(this.layoutControl1);
             this.Name = "ObrtPodaci";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Obrt podaci";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtImagePath.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obrtBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDjelatnost.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBanka.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIban.Properties)).EndInit();
@@ -390,12 +394,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtImagePath.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obrtBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

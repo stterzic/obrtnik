@@ -51,6 +51,8 @@ namespace Modules.Editors
                 obrt.Logo = Pic_arr;
 
                 obrt.InsertData();
+
+                this.Close();
             }
             else
             {
@@ -72,6 +74,8 @@ namespace Modules.Editors
                 obrt.Logo = Pic_arr;
 
                 obrt.UpdateData();
+
+                this.Close();
             }
         }
 

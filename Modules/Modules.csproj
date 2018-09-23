@@ -72,6 +72,30 @@
     <Compile Include="Modules\Editors\Prihod.Designer.cs">
       <DependentUpon>Prihod.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Editors\Proizvodi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Editors\Proizvodi.Designer.cs">
+      <DependentUpon>Proizvodi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Editors\Usluge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Editors\Usluge.Designer.cs">
+      <DependentUpon>Usluge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\List\Proizvodi_Lista.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\List\Proizvodi_Lista.Designer.cs">
+      <DependentUpon>Proizvodi_Lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\List\Usluge_Lista.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\List\Usluge_Lista.Designer.cs">
+      <DependentUpon>Usluge_Lista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\List\Prihodi_Lista.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,6 +119,18 @@
     <EmbeddedResource Include="Modules\Editors\Prihod.resx">
       <DependentUpon>Prihod.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Editors\Proizvodi.resx">
+      <DependentUpon>Proizvodi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Editors\Usluge.resx">
+      <DependentUpon>Usluge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\List\Proizvodi_Lista.resx">
+      <DependentUpon>Proizvodi_Lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\List\Usluge_Lista.resx">
+      <DependentUpon>Usluge_Lista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\List\Prihodi_Lista.resx">
       <DependentUpon>Prihodi_Lista.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +148,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\DataSources\Library.Obrt.datasource" />
+    <None Include="Properties\DataSources\Library.Prihodi.datasource" />
+    <None Include="Properties\DataSources\Library.PrihodiList.datasource" />
+    <None Include="Properties\DataSources\Library.Proizvodi.datasource" />
+    <None Include="Properties\DataSources\Library.ProizvodiList.datasource" />
+    <None Include="Properties\DataSources\Library.Usluge.datasource" />
+    <None Include="Properties\DataSources\Library.UslugeList.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

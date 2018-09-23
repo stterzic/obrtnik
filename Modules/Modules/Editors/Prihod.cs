@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Modules.Modules.Editors
+namespace Modules.Editors
 {
     public partial class Prihod : Form
     {
         public Prihod()
         {
             InitializeComponent();
+        }
+
+        public Prihod(int id)
+        {
+            InitializeComponent();
+            LoadData(id);
+        }
+        public void LoadData(int id)
+        {
+            PrihodiBindingSource.DataSource = new Library.Prihodi().GetData(id);
         }
     }
 }

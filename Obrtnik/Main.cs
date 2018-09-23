@@ -61,6 +61,14 @@ namespace Obrtnik
                     Modules.Prihodi_Lista prihodiLista = new Modules.Prihodi_Lista();
                     ShowForm(ListType, prihodiLista, "Lista prihoda");
                     break;
+                case "Proizvodi":
+                    Modules.Proizvodi_Lista proizvodiLista = new Modules.Proizvodi_Lista();
+                    ShowForm(ListType, proizvodiLista, "Lista proizvoda");
+                    break;
+                case "Usluge":
+                    Modules.Usluge_Lista uslugeLista = new Modules.Usluge_Lista();
+                    ShowForm(ListType, uslugeLista, "Lista usluga");
+                    break;
                 default:
                     break;
             }
@@ -125,6 +133,16 @@ namespace Obrtnik
         private void btnRacuniPrihod_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             MainOperator("RacuniPrihod");
+        }
+
+        private void btnProizvod_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MainOperator("Proizvodi");
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MainOperator("Usluge");
         }
     }
 }

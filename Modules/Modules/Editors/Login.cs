@@ -63,30 +63,38 @@ namespace Modules.Editors
 
                 //Kreiranje tablica
                 //Tablica korisnika
-                sqlite_cmd.CommandText = "CREATE TABLE Users (Id INTEGER PRIMARY KEY, Username varchar(100), Password varchar(100));";
+                sqlite_cmd.CommandText = "CREATE TABLE Users (Id INTEGER PRIMARY KEY, Username VARCHAR(100), Password VARCHAR(100));";
                 sqlite_cmd.ExecuteNonQuery();
 
                 //Tablica o obrtu
-                sqlite_cmd.CommandText = "CREATE TABLE Obrt (Id INTEGER PRIMARY KEY,NazivObrta varchar(100), Vlasnik varchar(100)," +
-                    "Adresa varchar(100),OIB varchar(100),IBAN varchar(100),Banka varchar(100),Djelatnost varchar(512), Logo BLOB);";
+                sqlite_cmd.CommandText = "CREATE TABLE Obrt (Id INTEGER PRIMARY KEY,NazivObrta VARCHAR(100), Vlasnik VARCHAR(100)," +
+                    "Adresa VARCHAR(100),OIB VARCHAR(100),IBAN VARCHAR(100),Banka VARCHAR(100),Djelatnost VARCHAR(512), Logo BLOB);";
                 sqlite_cmd.ExecuteNonQuery();
 
                 //Tablica usluga
-                sqlite_cmd.CommandText = "CREATE TABLE Usluge (Id INTEGER PRIMARY KEY, Naziv varchar(512));";
+                sqlite_cmd.CommandText = "CREATE TABLE Usluge (Id INTEGER PRIMARY KEY, Naziv VARCHAR(512));";
                 sqlite_cmd.ExecuteNonQuery();
 
                 //Tablica Proizvoda
-                sqlite_cmd.CommandText = "CREATE TABLE Proizvodi (Id INTEGER PRIMARY KEY, Naziv varchar(512));";
+                sqlite_cmd.CommandText = "CREATE TABLE Proizvodi (Id INTEGER PRIMARY KEY, Naziv VARCHAR(512));";
                 sqlite_cmd.ExecuteNonQuery();
 
                 //Tablica jedinica mjere
-                sqlite_cmd.CommandText = "CREATE TABLE JedinicaMjere (Id INTEGER PRIMARY KEY, Naziv varchar(512));";
+                sqlite_cmd.CommandText = "CREATE TABLE JedinicaMjere (Id INTEGER PRIMARY KEY, Naziv VARCHAR(512));";
                 sqlite_cmd.ExecuteNonQuery();
 
                 //Tablica Zakoni
-                sqlite_cmd.CommandText = "CREATE TABLE Zakoni (Id INTEGER PRIMARY KEY, Naziv varchar(512), Napomena varchar(512));";
+                sqlite_cmd.CommandText = "CREATE TABLE Zakoni (Id INTEGER PRIMARY KEY, Naziv VARCHAR(512), Napomena VARCHAR(512));";
                 sqlite_cmd.ExecuteNonQuery();
-                
+
+                //Tablica Zakoni
+                sqlite_cmd.CommandText = "CREATE TABLE Racuni (Id INTEGER PRIMARY KEY, KupacNaziv VARCHAR(512), Adresa VARCHAR(512)," +
+                    "Mjesto VARCHAR(512), OibKupca VARCHAR(512), NadnevakIzdavanjaRacuna DATETIME, DatumPredvideneIsporuke DATETIME," +
+                    "VrijemeIzrade DATETIME, DospijecePlacanja DATETIME, UslugaIliProizvod VARCHAR(512), JedinicaMjere VARCHAR(512)," +
+                    "Kolicina INTEGER,Cijena DECIMAL(10,2), Rabat INTEGER, Iznos DECIMAL(10,2), Napomena VARCHAR(512), IznosNaplacenGotovinom DECIMAL(10,2)," +
+                    "IznosNaplacenVirmanski DECIMAL(10,2), BrojIzvodaUplatnice INTEGER, NadnevakDatumUplate DATETIME);";
+                sqlite_cmd.ExecuteNonQuery();
+
                 //Popunjavanje tablica
                 //Popunjavanje tablice sa korisnikom
                 sqlite_cmd.CommandText = "INSERT INTO Users (Username, Password) VALUES ('" + txtUsername.Text + "', '" + txtPassword.Text + "');";
@@ -148,6 +156,7 @@ namespace Modules.Editors
             catch (Exception)
             {
                 XtraMessageBox.Show("Baza nije kreirana, molimo kreirajte bazu i usera!", "Greška", MessageBoxButtons.OK);
+                return;
             }
 
             Library.User user = new Library.User();
@@ -160,6 +169,7 @@ namespace Modules.Editors
             else
             {                
                 XtraMessageBox.Show("Korisnik sa tim podacima nije pronađen!", "Greška", MessageBoxButtons.OK);
+                return;
             }
         }
     }

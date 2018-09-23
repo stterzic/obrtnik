@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace Modules
 {
-    public partial class Prihodi_Lista : UserControl
+    public partial class Proizvodi_Lista : UserControl
     {
-        public Prihodi_Lista()
+        public Proizvodi_Lista()
         {
             InitializeComponent();
             LoadData();
@@ -21,7 +21,7 @@ namespace Modules
 
         public void LoadData()
         {
-            PrihodiListBindingSource.DataSource = new Library.PrihodiList().GetData(null);
+            ProizvodiListBindingSource.DataSource = new Library.ProizvodiList().GetData(null);
         }
 
         private void gridControl1_DoubleClick(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace Modules
             int iFocus = gridView1.FocusedRowHandle;
             if (iFocus < 0) return;
             int id = (int)gridView1.GetFocusedRowCellValue("Id");
-            using (Editors.Prihod f = new Editors.Prihod(id))
+            using (Editors.Proizvodi f = new Editors.Proizvodi(id))
             {
                 f.ShowDialog();
             }
@@ -39,8 +39,8 @@ namespace Modules
         {
             if (e.Button.ButtonType == NavigatorButtonType.Append)
             {
-                Editors.Prihod prihod = new Editors.Prihod();
-                prihod.Show();
+                Editors.Proizvodi proizvodi = new Editors.Proizvodi();
+                proizvodi.Show();
             }
             else if (e.Button.ButtonType == NavigatorButtonType.Remove)
             {
@@ -49,7 +49,7 @@ namespace Modules
                 int id = (int)gridView1.GetFocusedRowCellValue("Id");
                 if (MessageBox.Show("Dali ste sigurni za brisanje označenog zapisa?", "Upozorenje", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    Library.Prihodi item = new Library.Prihodi();
+                    Library.Proizvodi item = new Library.Proizvodi();
                     item.DeleteData(id);
                 }
             }

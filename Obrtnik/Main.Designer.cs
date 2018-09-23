@@ -83,6 +83,7 @@
             this.btnProizvod.Id = 1;
             this.btnProizvod.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnProizvod.LargeGlyph")));
             this.btnProizvod.Name = "btnProizvod";
+            this.btnProizvod.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProizvod_ItemClick);
             // 
             // barButtonItem1
             // 
@@ -91,6 +92,7 @@
             this.barButtonItem1.Id = 2;
             this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem2
             // 
