@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pictureEditLogo = new DevExpress.XtraEditors.PictureEdit();
-            this.obrtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.txtDjelatnost = new DevExpress.XtraEditors.TextEdit();
@@ -41,7 +39,6 @@
             this.txtVlasnik = new DevExpress.XtraEditors.TextEdit();
             this.txtNazivObrta = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -52,8 +49,14 @@
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEditLogo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obrtBindingSource)).BeginInit();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.logoPictureBox = new System.Windows.Forms.PictureBox();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtImagePath = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnPickImage = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.obrtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDjelatnost.Properties)).BeginInit();
@@ -64,7 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtVlasnik.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNazivObrta.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -75,27 +77,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtImagePath.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obrtBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureEditLogo
-            // 
-            this.pictureEditLogo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureEditLogo.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.obrtBindingSource, "Logo", true));
-            this.pictureEditLogo.Location = new System.Drawing.Point(12, 294);
-            this.pictureEditLogo.Name = "pictureEditLogo";
-            this.pictureEditLogo.Properties.NullText = "Logo";
-            this.pictureEditLogo.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEditLogo.Properties.ZoomAccelerationFactor = 1D;
-            this.pictureEditLogo.Size = new System.Drawing.Size(776, 144);
-            this.pictureEditLogo.StyleController = this.layoutControl1;
-            this.pictureEditLogo.TabIndex = 0;
-            // 
-            // obrtBindingSource
-            // 
-            this.obrtBindingSource.DataSource = typeof(Library.Obrt);
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btnPickImage);
+            this.layoutControl1.Controls.Add(this.txtImagePath);
+            this.layoutControl1.Controls.Add(this.logoPictureBox);
             this.layoutControl1.Controls.Add(this.btnSave);
             this.layoutControl1.Controls.Add(this.txtDjelatnost);
             this.layoutControl1.Controls.Add(this.txtBanka);
@@ -104,7 +98,6 @@
             this.layoutControl1.Controls.Add(this.txtAdresa);
             this.layoutControl1.Controls.Add(this.txtVlasnik);
             this.layoutControl1.Controls.Add(this.txtNazivObrta);
-            this.layoutControl1.Controls.Add(this.pictureEditLogo);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -192,7 +185,6 @@
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
             this.emptySpaceItem1,
             this.layoutControlItem2,
             this.layoutControlItem3,
@@ -202,24 +194,14 @@
             this.layoutControlItem7,
             this.layoutControlItem8,
             this.layoutControlItem9,
-            this.emptySpaceItem2});
+            this.emptySpaceItem2,
+            this.layoutControlItem1,
+            this.layoutControlItem10,
+            this.layoutControlItem11});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(800, 478);
             this.layoutControlGroup1.TextVisible = false;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.pictureEditLogo;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 266);
-            this.layoutControlItem1.MaxSize = new System.Drawing.Size(780, 164);
-            this.layoutControlItem1.MinSize = new System.Drawing.Size(780, 164);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(780, 164);
-            this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem1.Text = "Logo";
-            this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(59, 13);
             // 
             // emptySpaceItem1
             // 
@@ -315,6 +297,71 @@
             this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
+            // 
+            // logoPictureBox
+            // 
+            this.logoPictureBox.BackColor = System.Drawing.Color.White;
+            this.logoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.obrtBindingSource, "Logo", true));
+            this.logoPictureBox.Location = new System.Drawing.Point(12, 320);
+            this.logoPictureBox.Name = "logoPictureBox";
+            this.logoPictureBox.Size = new System.Drawing.Size(776, 118);
+            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoPictureBox.TabIndex = 12;
+            this.logoPictureBox.TabStop = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.logoPictureBox;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 292);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(780, 138);
+            this.layoutControlItem1.Text = "Logo";
+            this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(59, 13);
+            // 
+            // txtImagePath
+            // 
+            this.txtImagePath.Location = new System.Drawing.Point(74, 278);
+            this.txtImagePath.Name = "txtImagePath";
+            this.txtImagePath.Size = new System.Drawing.Size(634, 20);
+            this.txtImagePath.StyleController = this.layoutControl1;
+            this.txtImagePath.TabIndex = 13;
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.txtImagePath;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 266);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(700, 26);
+            this.layoutControlItem10.Text = "Logo path";
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(59, 13);
+            // 
+            // btnPickImage
+            // 
+            this.btnPickImage.Location = new System.Drawing.Point(712, 278);
+            this.btnPickImage.Name = "btnPickImage";
+            this.btnPickImage.Size = new System.Drawing.Size(76, 22);
+            this.btnPickImage.StyleController = this.layoutControl1;
+            this.btnPickImage.TabIndex = 14;
+            this.btnPickImage.Text = "Browse";
+            this.btnPickImage.Click += new System.EventHandler(this.btnPickImage_Click);
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.btnPickImage;
+            this.layoutControlItem11.Location = new System.Drawing.Point(700, 266);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(80, 26);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextVisible = false;
+            // 
+            // obrtBindingSource
+            // 
+            this.obrtBindingSource.DataSource = typeof(Library.Obrt);
+            // 
             // ObrtPodaci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,8 +370,6 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "ObrtPodaci";
             this.Text = "Obrt podaci";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEditLogo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obrtBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtDjelatnost.Properties)).EndInit();
@@ -335,7 +380,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtVlasnik.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNazivObrta.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -346,13 +390,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtImagePath.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obrtBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.PictureEdit pictureEditLogo;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraEditors.TextEdit txtDjelatnost;
         private DevExpress.XtraEditors.TextEdit txtBanka;
@@ -362,7 +410,6 @@
         private DevExpress.XtraEditors.TextEdit txtVlasnik;
         private DevExpress.XtraEditors.TextEdit txtNazivObrta;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
@@ -375,5 +422,12 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private System.Windows.Forms.BindingSource obrtBindingSource;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.PictureBox logoPictureBox;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraEditors.SimpleButton btnPickImage;
+        private DevExpress.XtraEditors.TextEdit txtImagePath;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
     }
 }

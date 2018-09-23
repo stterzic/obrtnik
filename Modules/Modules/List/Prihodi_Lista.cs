@@ -15,6 +15,12 @@ namespace Modules
         public Prihodi_Lista()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        public void LoadData()
+        {
+
         }
     }
 }

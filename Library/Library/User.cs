@@ -68,7 +68,7 @@ namespace Library
         {
             using (SQLiteCommand cm = cn.CreateCommand())
             {
-                cm.CommandText = String.Format("SELECT * FROM Users WHERE Username={0}", (string)criteria);
+                cm.CommandText = String.Format("SELECT * FROM Users WHERE Username='{0}'", (string)criteria);
                 cm.CommandType = CommandType.Text;
                 using (Helpers.SafeDataReader dr = new Helpers.SafeDataReader(cm.ExecuteReader()))
                 {

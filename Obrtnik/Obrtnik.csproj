@@ -109,6 +109,10 @@
     <Folder Include="Database\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{cf7d40a0-a6ec-4821-b3cc-9561613c6224}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modules\Modules.csproj">
       <Project>{617A479E-CDC3-4C30-B3C6-C3E25593BE48}</Project>
       <Name>Modules</Name>

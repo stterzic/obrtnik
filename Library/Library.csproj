@@ -35,6 +35,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +49,7 @@
     <Compile Include="Helpers\SafeDataReader.cs" />
     <Compile Include="Helpers\SqLite.cs" />
     <Compile Include="Library\Obrt.cs" />
+    <Compile Include="Library\Prihodi.cs" />
     <Compile Include="Library\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

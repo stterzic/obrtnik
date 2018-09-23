@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -21,10 +22,33 @@ namespace Library
         public string Iban { get; set; }
         public string Banka { get; set; }
         public string Djelatnost { get; set; }
-        public byte[] Logo = new byte[] { };
+        public byte[] Logo { get; set; }
+
 
         #endregion
-        
+
+        public bool CheckIfExist()
+        {
+            string rez = "";
+            using (SQLiteConnection cn = new SQLiteConnection(Helpers.SqLite.DBConnectionString))
+            {
+                cn.Open();
+                using (SQLiteCommand cm = cn.CreateCommand())
+                {
+                    cm.CommandType = CommandType.Text;
+                    cm.CommandText = String.Format("SELECT Id FROM Obrt WHERE Id=1;");
+                    object res = cm.ExecuteScalar();
+                    if (res != null && !(res is DBNull))
+                        rez = cm.ExecuteScalar().ToString();
+                }
+                cn.Close();
+            }
+            if (rez != "")
+                return true;
+            else
+                return false;
+        }
+
         #region GetData
 
         public void GetData(object criteria)
@@ -64,11 +88,21 @@ namespace Library
             }
         }
 
+        public void UpdateData()
+        {
+            using (SQLiteConnection cn = new SQLiteConnection(Helpers.SqLite.DBConnectionString))
+            {
+                cn.Open();
+                ExecuteUpdate(cn);
+                cn.Close();
+            }
+        }
+
         private void ExecuteFetch(SQLiteConnection cn, object criteria)
         {
             using (SQLiteCommand cm = cn.CreateCommand())
             {
-                cm.CommandText = String.Format("SELECT * FROM Obrt WHERE Id=1", (int)criteria);
+                cm.CommandText = String.Format("SELECT * FROM Obrt WHERE Id=1");
                 cm.CommandType = CommandType.Text;
                 using (Helpers.SafeDataReader dr = new Helpers.SafeDataReader(cm.ExecuteReader()))
                 {
@@ -111,37 +145,67 @@ namespace Library
             }
         }
 
+        private void ExecuteUpdate(SQLiteConnection cn)
+        {
+            using (SQLiteCommand cm = cn.CreateCommand())
+            {
+                cm.CommandType = CommandType.Text;
+                cm.CommandText = @"UPDATE Obrt SET
+								NazivObrta=@NazivObrta,
+                                Vlasnik=@Vlasnik,
+                                Adresa=@Adresa,
+                                Oib=@Oib,
+                                Iban=@Iban,
+                                Banka=@Banka,
+                                Djelatnost=@Djelatnost,
+                                Logo=@Logo WHERE Id=1;";
+
+                AddParameters(cm);
+                cm.Prepare();
+                cm.ExecuteNonQuery();
+            }
+        }
+
         #endregion
 
 
         private void AddParameters(SQLiteCommand cm)
         {
-            cm.Parameters.Add("@Id", DbType.Int32, Id);
+            cm.Parameters.Clear();
+            cm.Parameters.Add("@Id", DbType.Int32, 512);
             cm.Parameters["@Id"].Value = Id;
 
-            cm.Parameters.Add("@NazivObrta", DbType.String, NazivObrta.Length);
+            cm.Parameters.Add("@NazivObrta", DbType.String, 512);
             cm.Parameters["@NazivObrta"].Value = NazivObrta;
 
-            cm.Parameters.Add("@Vlasnik", DbType.String, Vlasnik.Length);
+            cm.Parameters.Add("@Vlasnik", DbType.String, 512);
             cm.Parameters["@Vlasnik"].Value = Vlasnik;
 
-            cm.Parameters.Add("@Adresa", DbType.String, Adresa.Length);
+            cm.Parameters.Add("@Adresa", DbType.String, 512);
             cm.Parameters["@Adresa"].Value = Adresa;
 
-            cm.Parameters.Add("@Oib", DbType.String, Oib.Length);
+            cm.Parameters.Add("@Oib", DbType.String, 512);
             cm.Parameters["@Oib"].Value = Oib;
 
-            cm.Parameters.Add("@Iban", DbType.String, Iban.Length);
+            cm.Parameters.Add("@Iban", DbType.String, 512);
             cm.Parameters["@Iban"].Value = Iban;
 
-            cm.Parameters.Add("@Banka", DbType.String, Banka.Length);
+            cm.Parameters.Add("@Banka", DbType.String, 512);
             cm.Parameters["@Banka"].Value = Banka;
 
-            cm.Parameters.Add("@Djelatnost", DbType.String, Djelatnost.Length);
+            cm.Parameters.Add("@Djelatnost", DbType.String, 512);
             cm.Parameters["@Djelatnost"].Value = Djelatnost;
 
-            cm.Parameters.Add("@Logo", DbType.Binary, Logo.Length);
-            cm.Parameters["@Logo"].Value = File.ReadAllBytes(Logo.ToString());
+            if (Logo != null)
+            {
+                cm.Parameters.Add("@Logo", DbType.Binary, Logo.Length);
+                cm.Parameters["@Logo"].Value = Logo;
+            }
+            else
+            {
+                cm.Parameters.Add("@Logo", DbType.Binary, 1024);
+                cm.Parameters["@Logo"].Value = new byte[0];
+            }
         }
     }
 }

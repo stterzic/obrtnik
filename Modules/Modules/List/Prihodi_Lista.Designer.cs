@@ -56,6 +56,7 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.EmbeddedNavigator.Buttons.Append.Hint = "New";
             this.gridControl1.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
@@ -69,14 +70,14 @@
             this.gridControl1.EmbeddedNavigator.Buttons.PrevPage.Visible = false;
             this.gridControl1.EmbeddedNavigator.Buttons.Remove.Hint = "Delete";
             this.gridControl1.EmbeddedNavigator.TextStringFormat = "";
-            this.gridControl1.EmbeddedNavigator.UseWaitCursor = true;
+            this.gridControl1.EmbeddedNavigator.UseWaitCursor = false;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1253, 681);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.UseEmbeddedNavigator = true;
-            this.gridControl1.UseWaitCursor = true;
+            this.gridControl1.UseWaitCursor = false;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -112,7 +113,7 @@
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowPreview = true;
             this.gridView1.OptionsView.ShowViewCaption = true;
-            this.gridView1.ViewCaption = "Prihodi";
+            this.gridView1.ViewCaption = "Lista prihoda";
             // 
             // colKupacNaziv
             // 
