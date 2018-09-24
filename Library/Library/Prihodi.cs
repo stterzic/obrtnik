@@ -113,7 +113,7 @@ namespace Library
         {
             using (SQLiteCommand cm = cn.CreateCommand())
             {
-                cm.CommandText = String.Format("SELECT * FROM Racuni WHERE Id='{0}'", (string)criteria);
+                cm.CommandText = String.Format("SELECT * FROM Racuni WHERE Id={0}", (int)criteria);
                 cm.CommandType = CommandType.Text;
                 using (Helpers.SafeDataReader dr = new Helpers.SafeDataReader(cm.ExecuteReader()))
                 {
@@ -184,9 +184,9 @@ namespace Library
             {
                 cm.CommandType = CommandType.Text;
                 cm.CommandText = @"UPDATE Racuni SET
-								KupacNaziv@KupacNaziv, 
+								KupacNaziv=@KupacNaziv, 
 								Adresa=@Adresa, 
-								Mjesto@Mjesto,
+								Mjesto=@Mjesto,
                                 OibKupca=@OibKupca,
                                 NadnevakIzdavanjaRacuna=@NadnevakIzdavanjaRacuna,
                                 DatumPredvideneIsporuke=@DatumPredvideneIsporuke,
@@ -198,7 +198,7 @@ namespace Library
                                 Cijena=@Cijena,
                                 Rabat=@Rabat,
                                 Iznos=@Iznos,
-                                Napomena@Napomena,
+                                Napomena=@Napomena,
                                 IznosNaplacenGotovinom=@IznosNaplacenGotovinom,
                                 IznosNaplacenVirmanski=@IznosNaplacenVirmanski,
                                 BrojIzvodaUplatnice=@BrojIzvodaUplatnice,

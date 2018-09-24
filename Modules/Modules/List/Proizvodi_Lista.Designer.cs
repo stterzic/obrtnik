@@ -66,6 +66,7 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
+            this.gridControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.gridControl1_MouseMove);
             // 
             // ProizvodiListBindingSource
             // 
@@ -92,6 +93,7 @@
             this.colNaziv.Caption = "Naziv";
             this.colNaziv.FieldName = "Naziv";
             this.colNaziv.Name = "colNaziv";
+            this.colNaziv.OptionsColumn.AllowEdit = false;
             this.colNaziv.Visible = true;
             this.colNaziv.VisibleIndex = 0;
             // 

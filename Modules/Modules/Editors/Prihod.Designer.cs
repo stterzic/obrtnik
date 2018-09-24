@@ -31,8 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControl6 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.txtBrojIzvodaUputnice = new DevExpress.XtraEditors.TextEdit();
+            this.PrihodiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtVirmanski = new DevExpress.XtraEditors.TextEdit();
             this.txtGotovina = new DevExpress.XtraEditors.TextEdit();
             this.dateEditNadnevakUplate = new DevExpress.XtraEditors.DateEdit();
@@ -42,6 +44,8 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControl5 = new DevExpress.XtraLayout.LayoutControl();
             this.lookUpEditNapomena = new DevExpress.XtraEditors.LookUpEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -49,8 +53,8 @@
             this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
             this.txtIznos = new DevExpress.XtraEditors.TextEdit();
             this.txtRabat = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCijena = new DevExpress.XtraEditors.TextEdit();
+            this.txtKolicina = new DevExpress.XtraEditors.TextEdit();
             this.lookUpEditUslugaProizvod = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpEditJedinicaMjere = new DevExpress.XtraEditors.LookUpEdit();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -73,7 +77,7 @@
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.txtMjesto = new DevExpress.XtraEditors.TextEdit();
             this.txtAdresa = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.txtOibKupca = new DevExpress.XtraEditors.TextEdit();
             this.txtKupacNaziv = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItemKupacNaziv = new DevExpress.XtraLayout.LayoutControlItem();
@@ -87,13 +91,16 @@
             this.layoutControlItemProizvod = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItemOpcenito = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItemNaplata = new DevExpress.XtraLayout.LayoutControlItem();
-            this.PrihodiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtRacunBroj = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl6)).BeginInit();
             this.layoutControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBrojIzvodaUputnice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrihodiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVirmanski.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGotovina.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditNadnevakUplate.Properties.CalendarTimeProperties)).BeginInit();
@@ -104,6 +111,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).BeginInit();
             this.layoutControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditNapomena.Properties)).BeginInit();
@@ -113,8 +122,8 @@
             this.layoutControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtIznos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRabat.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCijena.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKolicina.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditUslugaProizvod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditJedinicaMjere.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
@@ -143,7 +152,7 @@
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMjesto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdresa.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOibKupca.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKupacNaziv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemKupacNaziv)).BeginInit();
@@ -157,7 +166,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemProizvod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemOpcenito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemNaplata)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrihodiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRacunBroj.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -172,58 +183,79 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1102, 245, 310, 350);
             this.layoutControl1.Root = this.layoutControlGroupRoot;
-            this.layoutControl1.Size = new System.Drawing.Size(818, 693);
+            this.layoutControl1.Size = new System.Drawing.Size(829, 739);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // layoutControl6
             // 
+            this.layoutControl6.Controls.Add(this.txtRacunBroj);
+            this.layoutControl6.Controls.Add(this.btnSave);
             this.layoutControl6.Controls.Add(this.textEdit1);
             this.layoutControl6.Controls.Add(this.txtBrojIzvodaUputnice);
             this.layoutControl6.Controls.Add(this.txtVirmanski);
             this.layoutControl6.Controls.Add(this.txtGotovina);
             this.layoutControl6.Controls.Add(this.dateEditNadnevakUplate);
-            this.layoutControl6.Location = new System.Drawing.Point(411, 497);
+            this.layoutControl6.Location = new System.Drawing.Point(416, 497);
             this.layoutControl6.Name = "layoutControl6";
+            this.layoutControl6.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1066, 318, 250, 350);
             this.layoutControl6.Root = this.layoutControlGroup4;
-            this.layoutControl6.Size = new System.Drawing.Size(395, 184);
+            this.layoutControl6.Size = new System.Drawing.Size(401, 230);
             this.layoutControl6.TabIndex = 16;
             this.layoutControl6.Text = "layoutControl6";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(291, 196);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(98, 22);
+            this.btnSave.StyleController = this.layoutControl6;
+            this.btnSave.TabIndex = 17;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // textEdit1
             // 
             this.textEdit1.Location = new System.Drawing.Point(104, 145);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(279, 20);
+            this.textEdit1.Size = new System.Drawing.Size(285, 20);
             this.textEdit1.StyleController = this.layoutControl6;
             this.textEdit1.TabIndex = 8;
             // 
             // txtBrojIzvodaUputnice
             // 
+            this.txtBrojIzvodaUputnice.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "BrojIzvodaUplatnice", true));
             this.txtBrojIzvodaUputnice.Location = new System.Drawing.Point(104, 85);
             this.txtBrojIzvodaUputnice.Name = "txtBrojIzvodaUputnice";
-            this.txtBrojIzvodaUputnice.Size = new System.Drawing.Size(279, 20);
+            this.txtBrojIzvodaUputnice.Size = new System.Drawing.Size(285, 20);
             this.txtBrojIzvodaUputnice.StyleController = this.layoutControl6;
             this.txtBrojIzvodaUputnice.TabIndex = 6;
             // 
+            // PrihodiBindingSource
+            // 
+            this.PrihodiBindingSource.DataSource = typeof(Library.Prihodi);
+            // 
             // txtVirmanski
             // 
+            this.txtVirmanski.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "IznosNaplacenVirmanski", true));
             this.txtVirmanski.Location = new System.Drawing.Point(104, 42);
             this.txtVirmanski.Name = "txtVirmanski";
-            this.txtVirmanski.Size = new System.Drawing.Size(279, 20);
+            this.txtVirmanski.Size = new System.Drawing.Size(285, 20);
             this.txtVirmanski.StyleController = this.layoutControl6;
             this.txtVirmanski.TabIndex = 5;
             // 
             // txtGotovina
             // 
+            this.txtGotovina.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "IznosNaplacenGotovinom", true));
             this.txtGotovina.Location = new System.Drawing.Point(104, 12);
             this.txtGotovina.Name = "txtGotovina";
-            this.txtGotovina.Size = new System.Drawing.Size(279, 20);
+            this.txtGotovina.Size = new System.Drawing.Size(285, 20);
             this.txtGotovina.StyleController = this.layoutControl6;
             this.txtGotovina.TabIndex = 4;
             // 
             // dateEditNadnevakUplate
             // 
+            this.dateEditNadnevakUplate.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "NadnevakDatumUplate", true));
             this.dateEditNadnevakUplate.EditValue = null;
             this.dateEditNadnevakUplate.Location = new System.Drawing.Point(104, 115);
             this.dateEditNadnevakUplate.Name = "dateEditNadnevakUplate";
@@ -237,7 +269,7 @@
             this.dateEditNadnevakUplate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateEditNadnevakUplate.Properties.Mask.EditMask = "";
             this.dateEditNadnevakUplate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dateEditNadnevakUplate.Size = new System.Drawing.Size(279, 20);
+            this.dateEditNadnevakUplate.Size = new System.Drawing.Size(285, 20);
             this.dateEditNadnevakUplate.StyleController = this.layoutControl6;
             this.dateEditNadnevakUplate.TabIndex = 7;
             // 
@@ -250,17 +282,21 @@
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem5,
-            this.layoutControlItem6});
+            this.layoutControlItem6,
+            this.layoutControlItem7,
+            this.layoutControlItem8,
+            this.emptySpaceItem2,
+            this.emptySpaceItem3});
             this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(395, 184);
+            this.layoutControlGroup4.Name = "Root";
+            this.layoutControlGroup4.Size = new System.Drawing.Size(401, 230);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txtGotovina;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(375, 30);
+            this.layoutControlItem2.Size = new System.Drawing.Size(381, 30);
             this.layoutControlItem2.Text = "Iznos naplaćen\n  GOTOVINOM\n";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(89, 26);
             // 
@@ -269,7 +305,7 @@
             this.layoutControlItem3.Control = this.txtVirmanski;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(375, 43);
+            this.layoutControlItem3.Size = new System.Drawing.Size(381, 43);
             this.layoutControlItem3.Text = "Iznos naplaćen \nVIRMANSKI \npreko računa";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(89, 39);
             // 
@@ -278,7 +314,7 @@
             this.layoutControlItem4.Control = this.txtBrojIzvodaUputnice;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 73);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(375, 30);
+            this.layoutControlItem4.Size = new System.Drawing.Size(381, 30);
             this.layoutControlItem4.Text = "Broj\n izvoda uplatnice";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(89, 26);
             // 
@@ -287,7 +323,7 @@
             this.layoutControlItem5.Control = this.dateEditNadnevakUplate;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 103);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(375, 30);
+            this.layoutControlItem5.Size = new System.Drawing.Size(381, 30);
             this.layoutControlItem5.Text = "Nadnevak\ndatum uplate";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(89, 26);
             // 
@@ -296,9 +332,26 @@
             this.layoutControlItem6.Control = this.textEdit1;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 133);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(375, 31);
+            this.layoutControlItem6.Size = new System.Drawing.Size(381, 30);
             this.layoutControlItem6.Text = "PO-SD VIRMANSKI\n (ZA KPR)";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(89, 26);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.btnSave;
+            this.layoutControlItem7.Location = new System.Drawing.Point(279, 184);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(102, 26);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 163);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(279, 23);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControl5
             // 
@@ -306,18 +359,19 @@
             this.layoutControl5.Location = new System.Drawing.Point(12, 497);
             this.layoutControl5.Name = "layoutControl5";
             this.layoutControl5.Root = this.layoutControlGroup1;
-            this.layoutControl5.Size = new System.Drawing.Size(395, 184);
+            this.layoutControl5.Size = new System.Drawing.Size(400, 230);
             this.layoutControl5.TabIndex = 15;
             this.layoutControl5.Text = "layoutControl5";
             // 
             // lookUpEditNapomena
             // 
+            this.lookUpEditNapomena.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "Napomena", true));
             this.lookUpEditNapomena.Location = new System.Drawing.Point(70, 12);
             this.lookUpEditNapomena.Name = "lookUpEditNapomena";
             this.lookUpEditNapomena.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpEditNapomena.Properties.NullText = "";
-            this.lookUpEditNapomena.Size = new System.Drawing.Size(313, 20);
+            this.lookUpEditNapomena.Size = new System.Drawing.Size(318, 20);
             this.lookUpEditNapomena.StyleController = this.layoutControl5;
             this.lookUpEditNapomena.TabIndex = 4;
             // 
@@ -329,7 +383,7 @@
             this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(395, 184);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(400, 230);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -337,7 +391,7 @@
             this.layoutControlItem1.Control = this.lookUpEditNapomena;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(375, 164);
+            this.layoutControlItem1.Size = new System.Drawing.Size(380, 210);
             this.layoutControlItem1.Text = "Napomena:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(55, 13);
             // 
@@ -345,8 +399,8 @@
             // 
             this.layoutControl4.Controls.Add(this.txtIznos);
             this.layoutControl4.Controls.Add(this.txtRabat);
-            this.layoutControl4.Controls.Add(this.textEdit4);
-            this.layoutControl4.Controls.Add(this.textEdit3);
+            this.layoutControl4.Controls.Add(this.txtCijena);
+            this.layoutControl4.Controls.Add(this.txtKolicina);
             this.layoutControl4.Controls.Add(this.lookUpEditUslugaProizvod);
             this.layoutControl4.Controls.Add(this.lookUpEditJedinicaMjere);
             this.layoutControl4.Location = new System.Drawing.Point(12, 312);
@@ -359,6 +413,7 @@
             // 
             // txtIznos
             // 
+            this.txtIznos.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "Iznos", true));
             this.txtIznos.Location = new System.Drawing.Point(100, 108);
             this.txtIznos.Name = "txtIznos";
             this.txtIznos.Size = new System.Drawing.Size(682, 20);
@@ -367,34 +422,41 @@
             // 
             // txtRabat
             // 
+            this.txtRabat.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "Rabat", true));
             this.txtRabat.Location = new System.Drawing.Point(100, 132);
             this.txtRabat.Name = "txtRabat";
             this.txtRabat.Size = new System.Drawing.Size(682, 20);
             this.txtRabat.StyleController = this.layoutControl4;
             this.txtRabat.TabIndex = 8;
             // 
-            // textEdit4
+            // txtCijena
             // 
-            this.textEdit4.Location = new System.Drawing.Point(100, 84);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(682, 20);
-            this.textEdit4.StyleController = this.layoutControl4;
-            this.textEdit4.TabIndex = 7;
+            this.txtCijena.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "Cijena", true));
+            this.txtCijena.Location = new System.Drawing.Point(100, 84);
+            this.txtCijena.Name = "txtCijena";
+            this.txtCijena.Size = new System.Drawing.Size(682, 20);
+            this.txtCijena.StyleController = this.layoutControl4;
+            this.txtCijena.TabIndex = 7;
             // 
-            // textEdit3
+            // txtKolicina
             // 
-            this.textEdit3.Location = new System.Drawing.Point(100, 60);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(682, 20);
-            this.textEdit3.StyleController = this.layoutControl4;
-            this.textEdit3.TabIndex = 6;
+            this.txtKolicina.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "Kolicina", true));
+            this.txtKolicina.Location = new System.Drawing.Point(100, 60);
+            this.txtKolicina.Name = "txtKolicina";
+            this.txtKolicina.Size = new System.Drawing.Size(682, 20);
+            this.txtKolicina.StyleController = this.layoutControl4;
+            this.txtKolicina.TabIndex = 6;
             // 
             // lookUpEditUslugaProizvod
             // 
+            this.lookUpEditUslugaProizvod.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "UslugaIliProizvod", true));
             this.lookUpEditUslugaProizvod.Location = new System.Drawing.Point(100, 12);
             this.lookUpEditUslugaProizvod.Name = "lookUpEditUslugaProizvod";
             this.lookUpEditUslugaProizvod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEditUslugaProizvod.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "Kategorija"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Key", "Naziv")});
             this.lookUpEditUslugaProizvod.Properties.NullText = "";
             this.lookUpEditUslugaProizvod.Size = new System.Drawing.Size(682, 20);
             this.lookUpEditUslugaProizvod.StyleController = this.layoutControl4;
@@ -402,6 +464,7 @@
             // 
             // lookUpEditJedinicaMjere
             // 
+            this.lookUpEditJedinicaMjere.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "JedinicaMjere", true));
             this.lookUpEditJedinicaMjere.Location = new System.Drawing.Point(100, 36);
             this.lookUpEditJedinicaMjere.Name = "lookUpEditJedinicaMjere";
             this.lookUpEditJedinicaMjere.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -447,7 +510,7 @@
             // 
             // layoutControlItemKolicina
             // 
-            this.layoutControlItemKolicina.Control = this.textEdit3;
+            this.layoutControlItemKolicina.Control = this.txtKolicina;
             this.layoutControlItemKolicina.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItemKolicina.Name = "layoutControlItemKolicina";
             this.layoutControlItemKolicina.Size = new System.Drawing.Size(774, 24);
@@ -456,7 +519,7 @@
             // 
             // layoutControlItemCijena
             // 
-            this.layoutControlItemCijena.Control = this.textEdit4;
+            this.layoutControlItemCijena.Control = this.txtCijena;
             this.layoutControlItemCijena.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItemCijena.Name = "layoutControlItemCijena";
             this.layoutControlItemCijena.Size = new System.Drawing.Size(774, 24);
@@ -497,6 +560,7 @@
             // 
             // dateEditVrijemeIzrade
             // 
+            this.dateEditVrijemeIzrade.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "VrijemeIzrade", true));
             this.dateEditVrijemeIzrade.EditValue = null;
             this.dateEditVrijemeIzrade.Location = new System.Drawing.Point(150, 66);
             this.dateEditVrijemeIzrade.Name = "dateEditVrijemeIzrade";
@@ -510,6 +574,7 @@
             // 
             // dateEditDatumPredvidjeneIsporuke
             // 
+            this.dateEditDatumPredvidjeneIsporuke.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "DatumPredvideneIsporuke", true));
             this.dateEditDatumPredvidjeneIsporuke.EditValue = null;
             this.dateEditDatumPredvidjeneIsporuke.Location = new System.Drawing.Point(150, 42);
             this.dateEditDatumPredvidjeneIsporuke.Name = "dateEditDatumPredvidjeneIsporuke";
@@ -523,6 +588,7 @@
             // 
             // dateEditNadnevak
             // 
+            this.dateEditNadnevak.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "NadnevakIzdavanjaRacuna", true));
             this.dateEditNadnevak.EditValue = null;
             this.dateEditNadnevak.Location = new System.Drawing.Point(150, 12);
             this.dateEditNadnevak.Name = "dateEditNadnevak";
@@ -536,6 +602,7 @@
             // 
             // dateEditDospjecePlacanja
             // 
+            this.dateEditDospjecePlacanja.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "DospijecePlacanja", true));
             this.dateEditDospjecePlacanja.EditValue = null;
             this.dateEditDospjecePlacanja.Location = new System.Drawing.Point(150, 90);
             this.dateEditDospjecePlacanja.Name = "dateEditDospjecePlacanja";
@@ -601,7 +668,7 @@
             // 
             this.layoutControl2.Controls.Add(this.txtMjesto);
             this.layoutControl2.Controls.Add(this.txtAdresa);
-            this.layoutControl2.Controls.Add(this.textEdit5);
+            this.layoutControl2.Controls.Add(this.txtOibKupca);
             this.layoutControl2.Controls.Add(this.txtKupacNaziv);
             this.layoutControl2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.layoutControl2.Location = new System.Drawing.Point(12, 30);
@@ -614,6 +681,7 @@
             // 
             // txtMjesto
             // 
+            this.txtMjesto.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "Mjesto", true));
             this.txtMjesto.Location = new System.Drawing.Point(76, 60);
             this.txtMjesto.Name = "txtMjesto";
             this.txtMjesto.Size = new System.Drawing.Size(551, 20);
@@ -622,22 +690,25 @@
             // 
             // txtAdresa
             // 
+            this.txtAdresa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "Adresa", true));
             this.txtAdresa.Location = new System.Drawing.Point(76, 36);
             this.txtAdresa.Name = "txtAdresa";
             this.txtAdresa.Size = new System.Drawing.Size(551, 20);
             this.txtAdresa.StyleController = this.layoutControl2;
             this.txtAdresa.TabIndex = 6;
             // 
-            // textEdit5
+            // txtOibKupca
             // 
-            this.textEdit5.Location = new System.Drawing.Point(76, 84);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(551, 20);
-            this.textEdit5.StyleController = this.layoutControl2;
-            this.textEdit5.TabIndex = 5;
+            this.txtOibKupca.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "OibKupca", true));
+            this.txtOibKupca.Location = new System.Drawing.Point(76, 84);
+            this.txtOibKupca.Name = "txtOibKupca";
+            this.txtOibKupca.Size = new System.Drawing.Size(551, 20);
+            this.txtOibKupca.StyleController = this.layoutControl2;
+            this.txtOibKupca.TabIndex = 5;
             // 
             // txtKupacNaziv
             // 
+            this.txtKupacNaziv.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "KupacNaziv", true));
             this.txtKupacNaziv.Location = new System.Drawing.Point(76, 12);
             this.txtKupacNaziv.Name = "txtKupacNaziv";
             this.txtKupacNaziv.Size = new System.Drawing.Size(551, 20);
@@ -669,7 +740,7 @@
             // 
             // layoutControlItemOibKupca
             // 
-            this.layoutControlItemOibKupca.Control = this.textEdit5;
+            this.layoutControlItemOibKupca.Control = this.txtOibKupca;
             this.layoutControlItemOibKupca.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItemOibKupca.Name = "layoutControlItemOibKupca";
             this.layoutControlItemOibKupca.Size = new System.Drawing.Size(619, 24);
@@ -714,7 +785,7 @@
             this.layoutControlItemNaplata});
             this.layoutControlGroupRoot.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroupRoot.Name = "Root";
-            this.layoutControlGroupRoot.Size = new System.Drawing.Size(818, 693);
+            this.layoutControlGroupRoot.Size = new System.Drawing.Size(829, 739);
             this.layoutControlGroupRoot.TextVisible = false;
             // 
             // layoutControlItemKupac
@@ -724,7 +795,7 @@
             this.layoutControlItemKupac.MaxSize = new System.Drawing.Size(798, 138);
             this.layoutControlItemKupac.MinSize = new System.Drawing.Size(798, 138);
             this.layoutControlItemKupac.Name = "layoutControlItemKupac";
-            this.layoutControlItemKupac.Size = new System.Drawing.Size(798, 138);
+            this.layoutControlItemKupac.Size = new System.Drawing.Size(809, 138);
             this.layoutControlItemKupac.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItemKupac.Text = "Kupac";
             this.layoutControlItemKupac.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
@@ -739,7 +810,7 @@
             this.layoutControlItemDatumi.MaxSize = new System.Drawing.Size(798, 146);
             this.layoutControlItemDatumi.MinSize = new System.Drawing.Size(798, 146);
             this.layoutControlItemDatumi.Name = "layoutControlItemDatumi";
-            this.layoutControlItemDatumi.Size = new System.Drawing.Size(798, 146);
+            this.layoutControlItemDatumi.Size = new System.Drawing.Size(809, 146);
             this.layoutControlItemDatumi.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItemDatumi.Text = "Datumi";
             this.layoutControlItemDatumi.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
@@ -754,7 +825,7 @@
             this.layoutControlItemProizvod.MaxSize = new System.Drawing.Size(798, 185);
             this.layoutControlItemProizvod.MinSize = new System.Drawing.Size(798, 185);
             this.layoutControlItemProizvod.Name = "layoutControlItemProizvod";
-            this.layoutControlItemProizvod.Size = new System.Drawing.Size(798, 185);
+            this.layoutControlItemProizvod.Size = new System.Drawing.Size(809, 185);
             this.layoutControlItemProizvod.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItemProizvod.Text = "Proizvod";
             this.layoutControlItemProizvod.TextLocation = DevExpress.Utils.Locations.Top;
@@ -765,7 +836,7 @@
             this.layoutControlItemOpcenito.Control = this.layoutControl5;
             this.layoutControlItemOpcenito.Location = new System.Drawing.Point(0, 469);
             this.layoutControlItemOpcenito.Name = "layoutControlItemOpcenito";
-            this.layoutControlItemOpcenito.Size = new System.Drawing.Size(399, 204);
+            this.layoutControlItemOpcenito.Size = new System.Drawing.Size(404, 250);
             this.layoutControlItemOpcenito.Text = "Općenito";
             this.layoutControlItemOpcenito.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItemOpcenito.TextSize = new System.Drawing.Size(43, 13);
@@ -773,23 +844,46 @@
             // layoutControlItemNaplata
             // 
             this.layoutControlItemNaplata.Control = this.layoutControl6;
-            this.layoutControlItemNaplata.Location = new System.Drawing.Point(399, 469);
+            this.layoutControlItemNaplata.Location = new System.Drawing.Point(404, 469);
             this.layoutControlItemNaplata.Name = "layoutControlItemNaplata";
-            this.layoutControlItemNaplata.Size = new System.Drawing.Size(399, 204);
+            this.layoutControlItemNaplata.Size = new System.Drawing.Size(405, 250);
             this.layoutControlItemNaplata.Text = "Naplata";
             this.layoutControlItemNaplata.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItemNaplata.TextSize = new System.Drawing.Size(43, 13);
             // 
-            // PrihodiBindingSource
+            // txtRacunBroj
             // 
-            this.PrihodiBindingSource.DataSource = typeof(Library.Prihodi);
+            this.txtRacunBroj.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "Id", true));
+            this.txtRacunBroj.Enabled = false;
+            this.txtRacunBroj.Location = new System.Drawing.Point(104, 198);
+            this.txtRacunBroj.Name = "txtRacunBroj";
+            this.txtRacunBroj.Size = new System.Drawing.Size(183, 20);
+            this.txtRacunBroj.StyleController = this.layoutControl6;
+            this.txtRacunBroj.TabIndex = 18;
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.txtRacunBroj;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 186);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(279, 24);
+            this.layoutControlItem8.Text = "Racun broj:";
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(89, 13);
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(279, 163);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(102, 21);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // Prihod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(818, 693);
+            this.ClientSize = new System.Drawing.Size(829, 739);
             this.Controls.Add(this.layoutControl1);
             this.Name = "Prihod";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -800,6 +894,7 @@
             this.layoutControl6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBrojIzvodaUputnice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrihodiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVirmanski.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGotovina.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditNadnevakUplate.Properties.CalendarTimeProperties)).EndInit();
@@ -810,6 +905,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).EndInit();
             this.layoutControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditNapomena.Properties)).EndInit();
@@ -819,8 +916,8 @@
             this.layoutControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtIznos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRabat.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCijena.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKolicina.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditUslugaProizvod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditJedinicaMjere.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
@@ -849,7 +946,7 @@
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtMjesto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdresa.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOibKupca.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKupacNaziv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemKupacNaziv)).EndInit();
@@ -863,7 +960,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemProizvod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemOpcenito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemNaplata)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrihodiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRacunBroj.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -885,7 +984,7 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
         private DevExpress.XtraEditors.TextEdit txtMjesto;
         private DevExpress.XtraEditors.TextEdit txtAdresa;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit txtOibKupca;
         private DevExpress.XtraEditors.TextEdit txtKupacNaziv;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItemKupacNaziv;
@@ -899,8 +998,8 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItemProizvod;
         private DevExpress.XtraEditors.TextEdit txtRabat;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtCijena;
+        private DevExpress.XtraEditors.TextEdit txtKolicina;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItemUslugaProizvod;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItemJedinicaMjere;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItemKolicina;
@@ -929,5 +1028,11 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.LookUpEdit lookUpEditNapomena;
         private System.Windows.Forms.BindingSource PrihodiBindingSource;
+        private DevExpress.XtraEditors.SimpleButton btnSave;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraEditors.TextEdit txtRacunBroj;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
     }
 }

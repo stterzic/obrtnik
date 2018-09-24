@@ -38,6 +38,7 @@
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.btnObrt = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMjerneJedinice = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupBaza = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -47,6 +48,7 @@
             this.ribbonPageSifarnik = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupProizvod = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.splashScreenManager = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Obrtnik.WaitForm), true, true);
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -65,9 +67,10 @@
             this.btnRacuniPrihod,
             this.barButtonItem5,
             this.btnObrt,
-            this.barButtonItem6});
+            this.barButtonItem6,
+            this.btnMjerneJedinice});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 10;
+            this.ribbonControl1.MaxItemId = 11;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -139,6 +142,15 @@
             this.barButtonItem6.Id = 9;
             this.barButtonItem6.Name = "barButtonItem6";
             // 
+            // btnMjerneJedinice
+            // 
+            this.btnMjerneJedinice.Caption = "Mjerne jedinice";
+            this.btnMjerneJedinice.Glyph = ((System.Drawing.Image)(resources.GetObject("btnMjerneJedinice.Glyph")));
+            this.btnMjerneJedinice.Id = 10;
+            this.btnMjerneJedinice.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnMjerneJedinice.LargeGlyph")));
+            this.btnMjerneJedinice.Name = "btnMjerneJedinice";
+            this.btnMjerneJedinice.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMjerneJedinice_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -189,7 +201,8 @@
             // 
             this.ribbonPageSifarnik.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroupProizvod,
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup1});
             this.ribbonPageSifarnik.Name = "ribbonPageSifarnik";
             this.ribbonPageSifarnik.Text = "Šifarnik";
             // 
@@ -211,6 +224,14 @@
             this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Usluge";
             // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.AllowMinimize = false;
+            this.ribbonPageGroup1.AllowTextClipping = false;
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnMjerneJedinice);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Mjerne jedinice";
+            // 
             // splashScreenManager
             // 
             this.splashScreenManager.ClosingDelay = 500;
@@ -229,7 +250,7 @@
             this.IsMdiContainer = true;
             this.Name = "Main";
             this.Ribbon = this.ribbonControl1;
-            this.Text = "Form1";
+            this.Text = "Obrtnik";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
@@ -260,6 +281,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarButtonItem btnMjerneJedinice;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
     }
 }
 

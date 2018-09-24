@@ -1,6 +1,6 @@
 ﻿namespace Modules
 {
-    partial class Usluge_Lista
+    partial class MjerneJedinice_Lista
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.UslugeListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.MjerneJediniceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colNaziv = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UslugeListBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MjerneJediniceListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
             // 
             this.gridControl1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.gridControl1.DataSource = this.UslugeListBindingSource;
+            this.gridControl1.DataSource = this.MjerneJediniceListBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.EmbeddedNavigator.Buttons.Append.Hint = "New";
             this.gridControl1.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
@@ -68,9 +68,9 @@
             this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             this.gridControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.gridControl1_MouseMove);
             // 
-            // UslugeListBindingSource
+            // MjerneJediniceListBindingSource
             // 
-            this.UslugeListBindingSource.DataSource = typeof(Library.UslugeList);
+            this.MjerneJediniceListBindingSource.DataSource = typeof(Library.MjerneJediniceList);
             // 
             // gridView1
             // 
@@ -86,7 +86,7 @@
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowPreview = true;
             this.gridView1.OptionsView.ShowViewCaption = true;
-            this.gridView1.ViewCaption = "Lista Usluga";
+            this.gridView1.ViewCaption = "Lista mjernih jedinica";
             // 
             // colNaziv
             // 
@@ -102,15 +102,15 @@
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
             // 
-            // Usluge_Lista
+            // MjerneJedinice_Lista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl1);
-            this.Name = "Usluge_Lista";
+            this.Name = "MjerneJedinice_Lista";
             this.Size = new System.Drawing.Size(1253, 681);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UslugeListBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MjerneJediniceListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -120,7 +120,7 @@
 
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.BindingSource UslugeListBindingSource;
+        private System.Windows.Forms.BindingSource MjerneJediniceListBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colNaziv;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
     }

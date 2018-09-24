@@ -78,6 +78,12 @@
     <Compile Include="Modules\Editors\Proizvodi.Designer.cs">
       <DependentUpon>Proizvodi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Editors\MjerneJedinice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Editors\MjerneJedinice.Designer.cs">
+      <DependentUpon>MjerneJedinice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Editors\Usluge.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     </Compile>
     <Compile Include="Modules\List\Proizvodi_Lista.Designer.cs">
       <DependentUpon>Proizvodi_Lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\List\MjerneJedinice_Lista.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\List\MjerneJedinice_Lista.Designer.cs">
+      <DependentUpon>MjerneJedinice_Lista.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\List\Usluge_Lista.cs">
       <SubType>UserControl</SubType>
@@ -122,11 +134,17 @@
     <EmbeddedResource Include="Modules\Editors\Proizvodi.resx">
       <DependentUpon>Proizvodi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Editors\MjerneJedinice.resx">
+      <DependentUpon>MjerneJedinice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Editors\Usluge.resx">
       <DependentUpon>Usluge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\List\Proizvodi_Lista.resx">
       <DependentUpon>Proizvodi_Lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\List\MjerneJedinice_Lista.resx">
+      <DependentUpon>MjerneJedinice_Lista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\List\Usluge_Lista.resx">
       <DependentUpon>Usluge_Lista.cs</DependentUpon>
@@ -147,6 +165,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\DataSources\Library.MjerneJediniceList.datasource" />
     <None Include="Properties\DataSources\Library.Obrt.datasource" />
     <None Include="Properties\DataSources\Library.Prihodi.datasource" />
     <None Include="Properties\DataSources\Library.PrihodiList.datasource" />

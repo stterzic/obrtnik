@@ -145,7 +145,6 @@ namespace Modules.Editors
         private void btnLogin_Click(object sender, EventArgs e)
         {
             SQLiteConnection sqlite_conn;
-            SQLiteCommand sqlite_cmd;
             try
             {
                 sqlite_conn = new SQLiteConnection("Data Source=ObrtnikDatabase.db;Version=3;New=false;Compress=True;");

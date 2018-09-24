@@ -54,5 +54,10 @@ namespace Modules
                 }
             }
         }
+
+        private void gridControl1_MouseMove(object sender, MouseEventArgs e)
+        {
+            LoadData();
+        }
     }
 }

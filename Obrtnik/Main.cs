@@ -69,6 +69,10 @@ namespace Obrtnik
                     Modules.Usluge_Lista uslugeLista = new Modules.Usluge_Lista();
                     ShowForm(ListType, uslugeLista, "Lista usluga");
                     break;
+                case "MjerneJedinice":
+                    Modules.MjerneJedinice_Lista mjerneJediniceLista = new Modules.MjerneJedinice_Lista();
+                    ShowForm(ListType, mjerneJediniceLista, "Lista mjernih jedinica");
+                    break;
                 default:
                     break;
             }
@@ -143,6 +147,11 @@ namespace Obrtnik
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             MainOperator("Usluge");
+        }
+
+        private void btnMjerneJedinice_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MainOperator("MjerneJedinice");
         }
     }
 }
