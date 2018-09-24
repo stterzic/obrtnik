@@ -100,7 +100,7 @@ namespace Library
         {
             using (SQLiteCommand cm = cn.CreateCommand())
             {
-                cm.CommandText = String.Format("SELECT * FROM Zakoni WHERE Id='{0}'", (string)criteria);
+                cm.CommandText = String.Format("SELECT * FROM Zakoni WHERE Id={0}", (int)criteria);
                 cm.CommandType = CommandType.Text;
                 using (Helpers.SafeDataReader dr = new Helpers.SafeDataReader(cm.ExecuteReader()))
                 {
