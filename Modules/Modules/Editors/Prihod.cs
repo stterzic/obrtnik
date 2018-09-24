@@ -31,6 +31,8 @@ namespace Modules.Editors
             }
 
             lookUpEditUslugaProizvod.Properties.DataSource = collection;
+
+            MjerneJediniceListBindingSource.DataSource = new Library.MjerneJediniceList().GetData(null);
         }
 
         public Prihod(int id)

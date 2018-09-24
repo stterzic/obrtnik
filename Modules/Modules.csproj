@@ -165,6 +165,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\DataSources\Library.MjerneJedinice.datasource" />
     <None Include="Properties\DataSources\Library.MjerneJediniceList.datasource" />
     <None Include="Properties\DataSources\Library.Obrt.datasource" />
     <None Include="Properties\DataSources\Library.Prihodi.datasource" />

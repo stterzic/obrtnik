@@ -26,7 +26,7 @@ namespace Modules.Editors
 
         private void LoadData(int id)
         {
-            UslugeBindingSource.DataSource = new Library.Usluge().GetData(id);
+            MjerneJediniceBindingSource.DataSource = new Library.Usluge().GetData(id);
         }
 
         private void btnSave_Click(object sender, EventArgs e)

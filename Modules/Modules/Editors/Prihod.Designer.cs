@@ -31,10 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControl6 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtRacunBroj = new DevExpress.XtraEditors.TextEdit();
+            this.PrihodiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.txtBrojIzvodaUputnice = new DevExpress.XtraEditors.TextEdit();
-            this.PrihodiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtVirmanski = new DevExpress.XtraEditors.TextEdit();
             this.txtGotovina = new DevExpress.XtraEditors.TextEdit();
             this.dateEditNadnevakUplate = new DevExpress.XtraEditors.DateEdit();
@@ -45,7 +46,9 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControl5 = new DevExpress.XtraLayout.LayoutControl();
             this.lookUpEditNapomena = new DevExpress.XtraEditors.LookUpEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -91,16 +94,15 @@
             this.layoutControlItemProizvod = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItemOpcenito = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItemNaplata = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtRacunBroj = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.MjerneJediniceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl6)).BeginInit();
             this.layoutControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRacunBroj.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrihodiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBrojIzvodaUputnice.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrihodiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVirmanski.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGotovina.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditNadnevakUplate.Properties.CalendarTimeProperties)).BeginInit();
@@ -112,7 +114,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).BeginInit();
             this.layoutControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditNapomena.Properties)).BeginInit();
@@ -166,9 +170,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemProizvod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemOpcenito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemNaplata)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRacunBroj.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MjerneJediniceListBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -204,6 +206,20 @@
             this.layoutControl6.TabIndex = 16;
             this.layoutControl6.Text = "layoutControl6";
             // 
+            // txtRacunBroj
+            // 
+            this.txtRacunBroj.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "Id", true));
+            this.txtRacunBroj.Enabled = false;
+            this.txtRacunBroj.Location = new System.Drawing.Point(104, 198);
+            this.txtRacunBroj.Name = "txtRacunBroj";
+            this.txtRacunBroj.Size = new System.Drawing.Size(183, 20);
+            this.txtRacunBroj.StyleController = this.layoutControl6;
+            this.txtRacunBroj.TabIndex = 18;
+            // 
+            // PrihodiBindingSource
+            // 
+            this.PrihodiBindingSource.DataSource = typeof(Library.Prihodi);
+            // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(291, 196);
@@ -230,10 +246,6 @@
             this.txtBrojIzvodaUputnice.Size = new System.Drawing.Size(285, 20);
             this.txtBrojIzvodaUputnice.StyleController = this.layoutControl6;
             this.txtBrojIzvodaUputnice.TabIndex = 6;
-            // 
-            // PrihodiBindingSource
-            // 
-            this.PrihodiBindingSource.DataSource = typeof(Library.Prihodi);
             // 
             // txtVirmanski
             // 
@@ -345,6 +357,15 @@
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.txtRacunBroj;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 186);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(279, 24);
+            this.layoutControlItem8.Text = "Racun broj:";
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(89, 13);
+            // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
@@ -352,6 +373,14 @@
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Size = new System.Drawing.Size(279, 23);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(279, 163);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(102, 21);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControl5
             // 
@@ -469,7 +498,12 @@
             this.lookUpEditJedinicaMjere.Name = "lookUpEditJedinicaMjere";
             this.lookUpEditJedinicaMjere.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEditJedinicaMjere.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Naziv", "Naziv", 36, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.lookUpEditJedinicaMjere.Properties.DataSource = this.MjerneJediniceListBindingSource;
+            this.lookUpEditJedinicaMjere.Properties.DisplayMember = "Naziv";
             this.lookUpEditJedinicaMjere.Properties.NullText = "";
+            this.lookUpEditJedinicaMjere.Properties.ValueMember = "Naziv";
             this.lookUpEditJedinicaMjere.Size = new System.Drawing.Size(682, 20);
             this.lookUpEditJedinicaMjere.StyleController = this.layoutControl4;
             this.lookUpEditJedinicaMjere.TabIndex = 5;
@@ -851,32 +885,9 @@
             this.layoutControlItemNaplata.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItemNaplata.TextSize = new System.Drawing.Size(43, 13);
             // 
-            // txtRacunBroj
+            // MjerneJediniceListBindingSource
             // 
-            this.txtRacunBroj.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "Id", true));
-            this.txtRacunBroj.Enabled = false;
-            this.txtRacunBroj.Location = new System.Drawing.Point(104, 198);
-            this.txtRacunBroj.Name = "txtRacunBroj";
-            this.txtRacunBroj.Size = new System.Drawing.Size(183, 20);
-            this.txtRacunBroj.StyleController = this.layoutControl6;
-            this.txtRacunBroj.TabIndex = 18;
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.txtRacunBroj;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 186);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(279, 24);
-            this.layoutControlItem8.Text = "Racun broj:";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(89, 13);
-            // 
-            // emptySpaceItem3
-            // 
-            this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(279, 163);
-            this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(102, 21);
-            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.MjerneJediniceListBindingSource.DataSource = typeof(Library.MjerneJediniceList);
             // 
             // Prihod
             // 
@@ -892,9 +903,10 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl6)).EndInit();
             this.layoutControl6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtRacunBroj.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrihodiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBrojIzvodaUputnice.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrihodiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVirmanski.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGotovina.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditNadnevakUplate.Properties.CalendarTimeProperties)).EndInit();
@@ -906,7 +918,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).EndInit();
             this.layoutControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditNapomena.Properties)).EndInit();
@@ -960,9 +974,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemProizvod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemOpcenito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemNaplata)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRacunBroj.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MjerneJediniceListBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1034,5 +1046,6 @@
         private DevExpress.XtraEditors.TextEdit txtRacunBroj;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private System.Windows.Forms.BindingSource MjerneJediniceListBindingSource;
     }
 }

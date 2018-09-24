@@ -37,7 +37,7 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.UslugeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.MjerneJediniceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNaziv.Properties)).BeginInit();
@@ -46,7 +46,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UslugeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MjerneJediniceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -128,19 +128,19 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(187, 26);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // UslugeBindingSource
+            // MjerneJediniceBindingSource
             // 
-            this.UslugeBindingSource.DataSource = typeof(Library.Usluge);
+            this.MjerneJediniceBindingSource.DataSource = typeof(Library.MjerneJedinice);
             // 
-            // Usluge
+            // MjerneJedinice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(296, 86);
             this.Controls.Add(this.layoutControl1);
-            this.Name = "Usluge";
+            this.Name = "MjerneJedinice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Usluge";
+            this.Text = "Mjerne jedinice";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtNaziv.Properties)).EndInit();
@@ -149,7 +149,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UslugeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MjerneJediniceBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -164,6 +164,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private System.Windows.Forms.BindingSource UslugeBindingSource;
+        private System.Windows.Forms.BindingSource MjerneJediniceBindingSource;
     }
 }
