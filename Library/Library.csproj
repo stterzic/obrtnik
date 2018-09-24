@@ -50,6 +50,7 @@
     <Compile Include="Library\Obrt.cs" />
     <Compile Include="Library\Prihodi.cs" />
     <Compile Include="Library\MjerneJedinice.cs" />
+    <Compile Include="Library\Zakoni.cs" />
     <Compile Include="Library\Usluge.cs" />
     <Compile Include="Library\Proizvodi.cs" />
     <Compile Include="Library\User.cs" />

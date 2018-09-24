@@ -73,6 +73,10 @@ namespace Obrtnik
                     Modules.MjerneJedinice_Lista mjerneJediniceLista = new Modules.MjerneJedinice_Lista();
                     ShowForm(ListType, mjerneJediniceLista, "Lista mjernih jedinica");
                     break;
+                case "Napomena":
+                    Modules.Zakoni_Lista zakoniLista = new Modules.Zakoni_Lista();
+                    ShowForm(ListType, zakoniLista, "Lista Zakona");
+                    break;
                 default:
                     break;
             }
@@ -153,5 +157,10 @@ namespace Obrtnik
         {
             MainOperator("MjerneJedinice");
         }
-    }
+
+        private void btnNapomena_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MainOperator("Napomena");
+        }
+    }    
 }

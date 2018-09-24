@@ -51,6 +51,8 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.splashScreenManager = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Obrtnik.WaitForm), true, true);
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnNapomena = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -68,9 +70,10 @@
             this.barButtonItem5,
             this.btnObrt,
             this.barButtonItem6,
-            this.btnMjerneJedinice});
+            this.btnMjerneJedinice,
+            this.btnNapomena});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 11;
+            this.ribbonControl1.MaxItemId = 12;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -202,7 +205,8 @@
             this.ribbonPageSifarnik.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroupProizvod,
             this.ribbonPageGroup2,
-            this.ribbonPageGroup1});
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup6});
             this.ribbonPageSifarnik.Name = "ribbonPageSifarnik";
             this.ribbonPageSifarnik.Text = "Šifarnik";
             // 
@@ -239,6 +243,21 @@
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.btnNapomena);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            this.ribbonPageGroup6.Text = "Zakoni";
+            // 
+            // btnNapomena
+            // 
+            this.btnNapomena.Caption = "Napomena";
+            this.btnNapomena.Glyph = ((System.Drawing.Image)(resources.GetObject("btnNapomena.Glyph")));
+            this.btnNapomena.Id = 11;
+            this.btnNapomena.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnNapomena.LargeGlyph")));
+            this.btnNapomena.Name = "btnNapomena";
+            this.btnNapomena.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNapomena_ItemClick);
             // 
             // Main
             // 
@@ -283,6 +302,8 @@
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.BarButtonItem btnMjerneJedinice;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarButtonItem btnNapomena;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
     }
 }
 

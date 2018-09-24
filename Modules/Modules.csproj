@@ -84,6 +84,12 @@
     <Compile Include="Modules\Editors\MjerneJedinice.Designer.cs">
       <DependentUpon>MjerneJedinice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Editors\Zakoni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Editors\Zakoni.Designer.cs">
+      <DependentUpon>Zakoni.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Editors\Usluge.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,12 @@
     </Compile>
     <Compile Include="Modules\List\MjerneJedinice_Lista.Designer.cs">
       <DependentUpon>MjerneJedinice_Lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\List\Zakoni_Lista.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\List\Zakoni_Lista.Designer.cs">
+      <DependentUpon>Zakoni_Lista.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\List\Usluge_Lista.cs">
       <SubType>UserControl</SubType>
@@ -137,6 +149,9 @@
     <EmbeddedResource Include="Modules\Editors\MjerneJedinice.resx">
       <DependentUpon>MjerneJedinice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Editors\Zakoni.resx">
+      <DependentUpon>Zakoni.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Editors\Usluge.resx">
       <DependentUpon>Usluge.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\List\MjerneJedinice_Lista.resx">
       <DependentUpon>MjerneJedinice_Lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\List\Zakoni_Lista.resx">
+      <DependentUpon>Zakoni_Lista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\List\Usluge_Lista.resx">
       <DependentUpon>Usluge_Lista.cs</DependentUpon>
@@ -174,6 +192,8 @@
     <None Include="Properties\DataSources\Library.ProizvodiList.datasource" />
     <None Include="Properties\DataSources\Library.Usluge.datasource" />
     <None Include="Properties\DataSources\Library.UslugeList.datasource" />
+    <None Include="Properties\DataSources\Library.Zakoni.datasource" />
+    <None Include="Properties\DataSources\Library.ZakoniList.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
