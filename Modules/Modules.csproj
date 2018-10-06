@@ -190,6 +190,7 @@
     <None Include="Properties\DataSources\Library.PrihodiList.datasource" />
     <None Include="Properties\DataSources\Library.Proizvodi.datasource" />
     <None Include="Properties\DataSources\Library.ProizvodiList.datasource" />
+    <None Include="Properties\DataSources\Library.UslugaProizvodList.datasource" />
     <None Include="Properties\DataSources\Library.Usluge.datasource" />
     <None Include="Properties\DataSources\Library.UslugeList.datasource" />
     <None Include="Properties\DataSources\Library.Zakoni.datasource" />

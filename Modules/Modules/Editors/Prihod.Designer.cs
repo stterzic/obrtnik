@@ -54,19 +54,21 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
-            this.txtIznos = new DevExpress.XtraEditors.TextEdit();
-            this.txtRabat = new DevExpress.XtraEditors.TextEdit();
-            this.txtCijena = new DevExpress.XtraEditors.TextEdit();
-            this.txtKolicina = new DevExpress.XtraEditors.TextEdit();
-            this.lookUpEditUslugaProizvod = new DevExpress.XtraEditors.LookUpEdit();
-            this.lookUpEditJedinicaMjere = new DevExpress.XtraEditors.LookUpEdit();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.uslugaProizvodListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.MjerneJediniceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItemUslugaProizvod = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItemJedinicaMjere = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItemKolicina = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItemCijena = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItemRabat = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItemIznos = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
             this.dateEditVrijemeIzrade = new DevExpress.XtraEditors.DateEdit();
             this.dateEditDatumPredvidjeneIsporuke = new DevExpress.XtraEditors.DateEdit();
@@ -94,7 +96,7 @@
             this.layoutControlItemProizvod = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItemOpcenito = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItemNaplata = new DevExpress.XtraLayout.LayoutControlItem();
-            this.MjerneJediniceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl6)).BeginInit();
@@ -124,19 +126,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
             this.layoutControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIznos.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRabat.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCijena.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKolicina.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditUslugaProizvod.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditJedinicaMjere.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uslugaProizvodListBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MjerneJediniceListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemUslugaProizvod)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemJedinicaMjere)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemKolicina)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemCijena)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemRabat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemIznos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditVrijemeIzrade.Properties.CalendarTimeProperties)).BeginInit();
@@ -170,7 +167,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemProizvod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemOpcenito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemNaplata)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MjerneJediniceListBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -426,12 +422,7 @@
             // 
             // layoutControl4
             // 
-            this.layoutControl4.Controls.Add(this.txtIznos);
-            this.layoutControl4.Controls.Add(this.txtRabat);
-            this.layoutControl4.Controls.Add(this.txtCijena);
-            this.layoutControl4.Controls.Add(this.txtKolicina);
-            this.layoutControl4.Controls.Add(this.lookUpEditUslugaProizvod);
-            this.layoutControl4.Controls.Add(this.lookUpEditJedinicaMjere);
+            this.layoutControl4.Controls.Add(this.gridControl2);
             this.layoutControl4.Location = new System.Drawing.Point(12, 312);
             this.layoutControl4.Name = "layoutControl4";
             this.layoutControl4.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(901, 271, 250, 350);
@@ -440,143 +431,161 @@
             this.layoutControl4.TabIndex = 14;
             this.layoutControl4.Text = "layoutControl4";
             // 
-            // txtIznos
+            // gridControl2
             // 
-            this.txtIznos.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "Iznos", true));
-            this.txtIznos.Location = new System.Drawing.Point(100, 108);
-            this.txtIznos.Name = "txtIznos";
-            this.txtIznos.Size = new System.Drawing.Size(682, 20);
-            this.txtIznos.StyleController = this.layoutControl4;
-            this.txtIznos.TabIndex = 9;
+            this.gridControl2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.gridControl2.DataSource = this.uslugaProizvodListBindingSource;
+            this.gridControl2.EmbeddedNavigator.Buttons.Append.Hint = "New";
+            this.gridControl2.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.gridControl2.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.gridControl2.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.gridControl2.EmbeddedNavigator.Buttons.First.Visible = false;
+            this.gridControl2.EmbeddedNavigator.Buttons.Last.Visible = false;
+            this.gridControl2.EmbeddedNavigator.Buttons.Next.Visible = false;
+            this.gridControl2.EmbeddedNavigator.Buttons.NextPage.Visible = false;
+            this.gridControl2.EmbeddedNavigator.Buttons.Prev.Visible = false;
+            this.gridControl2.EmbeddedNavigator.Buttons.PrevPage.Visible = false;
+            this.gridControl2.EmbeddedNavigator.Buttons.Remove.Hint = "Delete";
+            this.gridControl2.EmbeddedNavigator.TextStringFormat = "";
+            this.gridControl2.EmbeddedNavigator.ButtonClick += new DevExpress.XtraEditors.NavigatorButtonClickEventHandler(this.gridControl1_EmbeddedNavigator_ButtonClick);
+            this.gridControl2.Location = new System.Drawing.Point(12, 12);
+            this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEdit1,
+            this.repositoryItemLookUpEdit2});
+            this.gridControl2.Size = new System.Drawing.Size(770, 141);
+            this.gridControl2.TabIndex = 11;
+            this.gridControl2.UseEmbeddedNavigator = true;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
             // 
-            // txtRabat
+            // uslugaProizvodListBindingSource
             // 
-            this.txtRabat.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "Rabat", true));
-            this.txtRabat.Location = new System.Drawing.Point(100, 132);
-            this.txtRabat.Name = "txtRabat";
-            this.txtRabat.Size = new System.Drawing.Size(682, 20);
-            this.txtRabat.StyleController = this.layoutControl4;
-            this.txtRabat.TabIndex = 8;
+            this.uslugaProizvodListBindingSource.DataSource = typeof(Library.UslugaProizvodList);
             // 
-            // txtCijena
+            // gridView2
             // 
-            this.txtCijena.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "Cijena", true));
-            this.txtCijena.Location = new System.Drawing.Point(100, 84);
-            this.txtCijena.Name = "txtCijena";
-            this.txtCijena.Size = new System.Drawing.Size(682, 20);
-            this.txtCijena.StyleController = this.layoutControl4;
-            this.txtCijena.TabIndex = 7;
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId,
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7});
+            this.gridView2.DetailTabHeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
+            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsDetail.AllowExpandEmptyDetails = true;
+            this.gridView2.OptionsDetail.SmartDetailHeight = true;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.OptionsView.ShowPreview = true;
+            this.gridView2.ViewCaption = "Lista mjernih jedinica";
+            this.gridView2.CellValueChanging += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView2_CellValueChanging);
             // 
-            // txtKolicina
+            // colId
             // 
-            this.txtKolicina.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "Kolicina", true));
-            this.txtKolicina.Location = new System.Drawing.Point(100, 60);
-            this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(682, 20);
-            this.txtKolicina.StyleController = this.layoutControl4;
-            this.txtKolicina.TabIndex = 6;
+            this.colId.Caption = "Id";
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
             // 
-            // lookUpEditUslugaProizvod
+            // gridColumn1
             // 
-            this.lookUpEditUslugaProizvod.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "UslugaIliProizvod", true));
-            this.lookUpEditUslugaProizvod.Location = new System.Drawing.Point(100, 12);
-            this.lookUpEditUslugaProizvod.Name = "lookUpEditUslugaProizvod";
-            this.lookUpEditUslugaProizvod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.gridColumn1.Caption = "Usluga/Proizvod";
+            this.gridColumn1.ColumnEdit = this.repositoryItemLookUpEdit2;
+            this.gridColumn1.FieldName = "UslugaIliProizvod";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // repositoryItemLookUpEdit2
+            // 
+            this.repositoryItemLookUpEdit2.AutoHeight = false;
+            this.repositoryItemLookUpEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEditUslugaProizvod.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "Kategorija"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Key", "Naziv")});
-            this.lookUpEditUslugaProizvod.Properties.NullText = "";
-            this.lookUpEditUslugaProizvod.Size = new System.Drawing.Size(682, 20);
-            this.lookUpEditUslugaProizvod.StyleController = this.layoutControl4;
-            this.lookUpEditUslugaProizvod.TabIndex = 4;
+            this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
+            this.repositoryItemLookUpEdit2.NullText = "";
             // 
-            // lookUpEditJedinicaMjere
+            // gridColumn2
             // 
-            this.lookUpEditJedinicaMjere.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.PrihodiBindingSource, "JedinicaMjere", true));
-            this.lookUpEditJedinicaMjere.Location = new System.Drawing.Point(100, 36);
-            this.lookUpEditJedinicaMjere.Name = "lookUpEditJedinicaMjere";
-            this.lookUpEditJedinicaMjere.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.gridColumn2.Caption = "Jedinica mjere";
+            this.gridColumn2.ColumnEdit = this.repositoryItemLookUpEdit1;
+            this.gridColumn2.FieldName = "JedinicaMjere";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
+            // repositoryItemLookUpEdit1
+            // 
+            this.repositoryItemLookUpEdit1.AutoHeight = false;
+            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEditJedinicaMjere.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            this.repositoryItemLookUpEdit1.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Naziv", "Naziv", 36, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.lookUpEditJedinicaMjere.Properties.DataSource = this.MjerneJediniceListBindingSource;
-            this.lookUpEditJedinicaMjere.Properties.DisplayMember = "Naziv";
-            this.lookUpEditJedinicaMjere.Properties.NullText = "";
-            this.lookUpEditJedinicaMjere.Properties.ValueMember = "Naziv";
-            this.lookUpEditJedinicaMjere.Size = new System.Drawing.Size(682, 20);
-            this.lookUpEditJedinicaMjere.StyleController = this.layoutControl4;
-            this.lookUpEditJedinicaMjere.TabIndex = 5;
+            this.repositoryItemLookUpEdit1.DataSource = this.MjerneJediniceListBindingSource;
+            this.repositoryItemLookUpEdit1.DisplayMember = "Naziv";
+            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
+            this.repositoryItemLookUpEdit1.NullText = "";
+            this.repositoryItemLookUpEdit1.ValueMember = "Naziv";
+            // 
+            // MjerneJediniceListBindingSource
+            // 
+            this.MjerneJediniceListBindingSource.DataSource = typeof(Library.MjerneJediniceList);
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Količina";
+            this.gridColumn3.FieldName = "Kolicina";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Cijena";
+            this.gridColumn4.FieldName = "Cijena";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Iznos";
+            this.gridColumn5.FieldName = "Iznos";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.AllowEdit = false;
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 5;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Rabat";
+            this.gridColumn6.FieldName = "Rabat";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 4;
             // 
             // layoutControlGroup3
             // 
             this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup3.GroupBordersVisible = false;
             this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItemUslugaProizvod,
-            this.layoutControlItemJedinicaMjere,
-            this.layoutControlItemKolicina,
-            this.layoutControlItemCijena,
-            this.layoutControlItemRabat,
-            this.layoutControlItemIznos});
+            this.layoutControlItem10});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "Root";
             this.layoutControlGroup3.Size = new System.Drawing.Size(794, 165);
             this.layoutControlGroup3.TextVisible = false;
             // 
-            // layoutControlItemUslugaProizvod
+            // layoutControlItem10
             // 
-            this.layoutControlItemUslugaProizvod.Control = this.lookUpEditUslugaProizvod;
-            this.layoutControlItemUslugaProizvod.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItemUslugaProizvod.Name = "layoutControlItemUslugaProizvod";
-            this.layoutControlItemUslugaProizvod.Size = new System.Drawing.Size(774, 24);
-            this.layoutControlItemUslugaProizvod.Text = "Usluga ili proizvod";
-            this.layoutControlItemUslugaProizvod.TextSize = new System.Drawing.Size(85, 13);
-            // 
-            // layoutControlItemJedinicaMjere
-            // 
-            this.layoutControlItemJedinicaMjere.Control = this.lookUpEditJedinicaMjere;
-            this.layoutControlItemJedinicaMjere.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItemJedinicaMjere.Name = "layoutControlItemJedinicaMjere";
-            this.layoutControlItemJedinicaMjere.Size = new System.Drawing.Size(774, 24);
-            this.layoutControlItemJedinicaMjere.Text = "Jedinica mjere:";
-            this.layoutControlItemJedinicaMjere.TextSize = new System.Drawing.Size(85, 13);
-            // 
-            // layoutControlItemKolicina
-            // 
-            this.layoutControlItemKolicina.Control = this.txtKolicina;
-            this.layoutControlItemKolicina.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItemKolicina.Name = "layoutControlItemKolicina";
-            this.layoutControlItemKolicina.Size = new System.Drawing.Size(774, 24);
-            this.layoutControlItemKolicina.Text = "Količina:";
-            this.layoutControlItemKolicina.TextSize = new System.Drawing.Size(85, 13);
-            // 
-            // layoutControlItemCijena
-            // 
-            this.layoutControlItemCijena.Control = this.txtCijena;
-            this.layoutControlItemCijena.Location = new System.Drawing.Point(0, 72);
-            this.layoutControlItemCijena.Name = "layoutControlItemCijena";
-            this.layoutControlItemCijena.Size = new System.Drawing.Size(774, 24);
-            this.layoutControlItemCijena.Text = "Cijena:";
-            this.layoutControlItemCijena.TextSize = new System.Drawing.Size(85, 13);
-            // 
-            // layoutControlItemRabat
-            // 
-            this.layoutControlItemRabat.Control = this.txtRabat;
-            this.layoutControlItemRabat.Location = new System.Drawing.Point(0, 120);
-            this.layoutControlItemRabat.Name = "layoutControlItemRabat";
-            this.layoutControlItemRabat.Size = new System.Drawing.Size(774, 25);
-            this.layoutControlItemRabat.Text = "Rabat:";
-            this.layoutControlItemRabat.TextSize = new System.Drawing.Size(85, 13);
-            // 
-            // layoutControlItemIznos
-            // 
-            this.layoutControlItemIznos.Control = this.txtIznos;
-            this.layoutControlItemIznos.Location = new System.Drawing.Point(0, 96);
-            this.layoutControlItemIznos.Name = "layoutControlItemIznos";
-            this.layoutControlItemIznos.Size = new System.Drawing.Size(774, 24);
-            this.layoutControlItemIznos.Text = "Iznos:";
-            this.layoutControlItemIznos.TextSize = new System.Drawing.Size(85, 13);
+            this.layoutControlItem10.Control = this.gridControl2;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(774, 145);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextVisible = false;
             // 
             // layoutControl3
             // 
@@ -861,9 +870,9 @@
             this.layoutControlItemProizvod.Name = "layoutControlItemProizvod";
             this.layoutControlItemProizvod.Size = new System.Drawing.Size(809, 185);
             this.layoutControlItemProizvod.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItemProizvod.Text = "Proizvod";
+            this.layoutControlItemProizvod.Text = "Proizvod/Usluga";
             this.layoutControlItemProizvod.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItemProizvod.TextSize = new System.Drawing.Size(43, 13);
+            this.layoutControlItemProizvod.TextSize = new System.Drawing.Size(77, 13);
             // 
             // layoutControlItemOpcenito
             // 
@@ -873,7 +882,7 @@
             this.layoutControlItemOpcenito.Size = new System.Drawing.Size(404, 250);
             this.layoutControlItemOpcenito.Text = "Općenito";
             this.layoutControlItemOpcenito.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItemOpcenito.TextSize = new System.Drawing.Size(43, 13);
+            this.layoutControlItemOpcenito.TextSize = new System.Drawing.Size(77, 13);
             // 
             // layoutControlItemNaplata
             // 
@@ -883,11 +892,12 @@
             this.layoutControlItemNaplata.Size = new System.Drawing.Size(405, 250);
             this.layoutControlItemNaplata.Text = "Naplata";
             this.layoutControlItemNaplata.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItemNaplata.TextSize = new System.Drawing.Size(43, 13);
+            this.layoutControlItemNaplata.TextSize = new System.Drawing.Size(77, 13);
             // 
-            // MjerneJediniceListBindingSource
+            // gridColumn7
             // 
-            this.MjerneJediniceListBindingSource.DataSource = typeof(Library.MjerneJediniceList);
+            this.gridColumn7.FieldName = "Id";
+            this.gridColumn7.Name = "gridColumn7";
             // 
             // Prihod
             // 
@@ -928,19 +938,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
             this.layoutControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtIznos.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRabat.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCijena.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKolicina.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditUslugaProizvod.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditJedinicaMjere.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uslugaProizvodListBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MjerneJediniceListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemUslugaProizvod)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemJedinicaMjere)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemKolicina)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemCijena)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemRabat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemIznos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dateEditVrijemeIzrade.Properties.CalendarTimeProperties)).EndInit();
@@ -974,7 +979,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemProizvod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemOpcenito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemNaplata)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MjerneJediniceListBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1009,18 +1013,6 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl4;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItemProizvod;
-        private DevExpress.XtraEditors.TextEdit txtRabat;
-        private DevExpress.XtraEditors.TextEdit txtCijena;
-        private DevExpress.XtraEditors.TextEdit txtKolicina;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItemUslugaProizvod;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItemJedinicaMjere;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItemKolicina;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItemCijena;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItemRabat;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEditUslugaProizvod;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEditJedinicaMjere;
-        private DevExpress.XtraEditors.TextEdit txtIznos;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItemIznos;
         private DevExpress.XtraLayout.LayoutControl layoutControl6;
         private DevExpress.XtraEditors.TextEdit txtBrojIzvodaUputnice;
         private DevExpress.XtraEditors.TextEdit txtVirmanski;
@@ -1047,5 +1039,19 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private System.Windows.Forms.BindingSource MjerneJediniceListBindingSource;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit2;
+        private System.Windows.Forms.BindingSource uslugaProizvodListBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraWaitForm;
 using Finisar.SQLite;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,16 @@ namespace Modules.Editors
         public Login()
         {
             InitializeComponent();
+            try
+            {
+                string username = Registry.GetValue(@"HKEY_CURRENT_USER\Obrtnik Username", "Obrtnik Username", "NULL").ToString();
+                string password = Registry.GetValue(@"HKEY_CURRENT_USER\Obrtnik Password", "Obrtnik Password", "NULL").ToString();
+                txtUsername.Text = username;
+                txtPassword.Text = password;
+            }
+            catch (Exception)
+            { }
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -87,12 +98,16 @@ namespace Modules.Editors
                 sqlite_cmd.CommandText = "CREATE TABLE Zakoni (Id INTEGER PRIMARY KEY, Naziv VARCHAR(512), Napomena VARCHAR(512));";
                 sqlite_cmd.ExecuteNonQuery();
 
-                //Tablica Zakoni
+                //Tablica racun
                 sqlite_cmd.CommandText = "CREATE TABLE Racuni (Id INTEGER PRIMARY KEY, KupacNaziv VARCHAR(512), Adresa VARCHAR(512)," +
                     "Mjesto VARCHAR(512), OibKupca VARCHAR(512), NadnevakIzdavanjaRacuna DATETIME, DatumPredvideneIsporuke DATETIME," +
-                    "VrijemeIzrade DATETIME, DospijecePlacanja DATETIME, UslugaIliProizvod VARCHAR(512), JedinicaMjere VARCHAR(512)," +
-                    "Kolicina INTEGER,Cijena DECIMAL(10,2), Rabat INTEGER, Iznos DECIMAL(10,2), Napomena VARCHAR(512), IznosNaplacenGotovinom DECIMAL(10,2)," +
+                    "VrijemeIzrade DATETIME, DospijecePlacanja DATETIME, Napomena VARCHAR(512), IznosNaplacenGotovinom DECIMAL(10,2)," +
                     "IznosNaplacenVirmanski DECIMAL(10,2), BrojIzvodaUplatnice INTEGER, NadnevakDatumUplate DATETIME);";
+                sqlite_cmd.ExecuteNonQuery();
+
+                //Tablica uslugaProizvod
+                sqlite_cmd.CommandText = "CREATE TABLE UslugaProizvod (Id INTEGER PRIMARY KEY, UslugaIliProizvod VARCHAR(512), JedinicaMjere VARCHAR(512)," +
+                    "Kolicina INTEGER, Cijena DECIMAL(10,2), Iznos DECIMAL(10,2), Rabat INTEGER, RacunId INTEGER);";
                 sqlite_cmd.ExecuteNonQuery();
 
                 //Popunjavanje tablica
@@ -160,9 +175,20 @@ namespace Modules.Editors
 
             Library.User user = new Library.User();
             if (user.CheckIfExist(txtUsername.Text))
-            {
+            {                
                 user.GetData(txtUsername.Text);
                 Library.Helpers.Common.User = user;
+
+                Microsoft.Win32.RegistryKey username;
+                username = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Obrtnik Username");
+                username.SetValue("Obrtnik Username", txtUsername.Text);
+                username.Close();
+
+                Microsoft.Win32.RegistryKey password;
+                password = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Obrtnik Password");
+                password.SetValue("Obrtnik Password", txtPassword.Text);
+                password.Close();
+
                 this.Close();
             }
             else

@@ -51,6 +51,25 @@ namespace Library
             return this;
         }
 
+        public int GetMaxId()
+        {
+            int rez = 0;
+            using (SQLiteConnection cn = new SQLiteConnection(Helpers.SqLite.DBConnectionString))
+            {
+                cn.Open();
+                using (SQLiteCommand cm = cn.CreateCommand())
+                {
+                    cm.CommandType = CommandType.Text;
+                    cm.CommandText = String.Format("SELECT MAX(Id) FROM Racuni;");
+                    object res = cm.ExecuteScalar();
+                    if (res != null && !(res is DBNull))
+                        rez = Convert.ToInt32(res);
+                }
+                cn.Close();
+            }
+            return rez;
+        }
+
         public void GetDataReader(Helpers.SafeDataReader dr)
         {
             Id = dr.GetInt32("Id");
@@ -62,12 +81,6 @@ namespace Library
             DatumPredvideneIsporuke = dr.GetDateTime("DatumPredvideneIsporuke");
             VrijemeIzrade = dr.GetDateTime("VrijemeIzrade");
             DospijecePlacanja = dr.GetDateTime("DospijecePlacanja");
-            UslugaIliProizvod = dr.GetString("UslugaIliProizvod");
-            JedinicaMjere = dr.GetString("JedinicaMjere");
-            Kolicina = dr.GetInt32("Kolicina");
-            Cijena = dr.GetDecimal("Cijena");
-            Rabat = dr.GetInt32("Rabat");
-            Iznos = dr.GetDecimal("Iznos");
             Napomena = dr.GetString("Napomena");
             IznosNaplacenGotovinom = dr.GetDecimal("IznosNaplacenGotovinom");
             IznosNaplacenVirmanski = dr.GetDecimal("IznosNaplacenVirmanski");
@@ -139,12 +152,6 @@ namespace Library
                                 DatumPredvideneIsporuke,
                                 VrijemeIzrade,
                                 DospijecePlacanja,
-                                UslugaIliProizvod,
-                                JedinicaMjere,
-                                Kolicina,
-                                Cijena,
-                                Rabat,
-                                Iznos,
                                 Napomena,
                                 IznosNaplacenGotovinom,
                                 IznosNaplacenVirmanski,
@@ -159,12 +166,6 @@ namespace Library
                                 @DatumPredvideneIsporuke,
                                 @VrijemeIzrade,
                                 @DospijecePlacanja,
-                                @UslugaIliProizvod,
-                                @JedinicaMjere,
-                                @Kolicina,
-                                @Cijena,
-                                @Rabat,
-                                @Iznos,
                                 @Napomena,
                                 @IznosNaplacenGotovinom,
                                 @IznosNaplacenVirmanski,
@@ -192,12 +193,6 @@ namespace Library
                                 DatumPredvideneIsporuke=@DatumPredvideneIsporuke,
                                 VrijemeIzrade=@VrijemeIzrade,
                                 DospijecePlacanja=@DospijecePlacanja,
-                                UslugaIliProizvod=@UslugaIliProizvod,
-                                JedinicaMjere=@JedinicaMjere,
-                                Kolicina=@Kolicina,
-                                Cijena=@Cijena,
-                                Rabat=@Rabat,
-                                Iznos=@Iznos,
                                 Napomena=@Napomena,
                                 IznosNaplacenGotovinom=@IznosNaplacenGotovinom,
                                 IznosNaplacenVirmanski=@IznosNaplacenVirmanski,
@@ -252,24 +247,6 @@ namespace Library
 
             cm.Parameters.Add("@DospijecePlacanja", DbType.DateTime, 512);
             cm.Parameters["@DospijecePlacanja"].Value = DospijecePlacanja;
-
-            cm.Parameters.Add("@UslugaIliProizvod", DbType.String, 512);
-            cm.Parameters["@UslugaIliProizvod"].Value = UslugaIliProizvod;
-
-            cm.Parameters.Add("@JedinicaMjere", DbType.String, 512);
-            cm.Parameters["@JedinicaMjere"].Value = JedinicaMjere;
-
-            cm.Parameters.Add("@Kolicina", DbType.Int32, 512);
-            cm.Parameters["@Kolicina"].Value = Kolicina;
-
-            cm.Parameters.Add("@Cijena", DbType.Decimal, 512);
-            cm.Parameters["@Cijena"].Value = Cijena;
-
-            cm.Parameters.Add("@Rabat", DbType.Int32, 512);
-            cm.Parameters["@Rabat"].Value = Rabat;
-
-            cm.Parameters.Add("@Iznos", DbType.Decimal, 512);
-            cm.Parameters["@Iznos"].Value = Iznos;
 
             cm.Parameters.Add("@Napomena", DbType.String, 512);
             cm.Parameters["@Napomena"].Value = Napomena;
