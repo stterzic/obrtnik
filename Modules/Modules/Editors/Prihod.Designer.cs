@@ -67,6 +67,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
@@ -96,7 +97,7 @@
             this.layoutControlItemProizvod = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItemOpcenito = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItemNaplata = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.zakoniListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl6)).BeginInit();
@@ -167,6 +168,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemProizvod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemOpcenito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemNaplata)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zakoniListBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -496,6 +498,7 @@
             this.gridColumn1.Caption = "Usluga/Proizvod";
             this.gridColumn1.ColumnEdit = this.repositoryItemLookUpEdit2;
             this.gridColumn1.FieldName = "UslugaIliProizvod";
+            this.gridColumn1.FilterMode = DevExpress.XtraGrid.ColumnFilterMode.DisplayText;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
@@ -505,8 +508,13 @@
             this.repositoryItemLookUpEdit2.AutoHeight = false;
             this.repositoryItemLookUpEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit2.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "Naziv")});
+            this.repositoryItemLookUpEdit2.DataSource = this.uslugaProizvodListBindingSource;
+            this.repositoryItemLookUpEdit2.DisplayMember = "UslugaIliProizvod";
             this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
             this.repositoryItemLookUpEdit2.NullText = "";
+            this.repositoryItemLookUpEdit2.ValueMember = "UslugaIliProizvod";
             // 
             // gridColumn2
             // 
@@ -566,6 +574,11 @@
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 4;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.FieldName = "Id";
+            this.gridColumn7.Name = "gridColumn7";
             // 
             // layoutControlGroup3
             // 
@@ -894,10 +907,9 @@
             this.layoutControlItemNaplata.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItemNaplata.TextSize = new System.Drawing.Size(77, 13);
             // 
-            // gridColumn7
+            // zakoniListBindingSource
             // 
-            this.gridColumn7.FieldName = "Id";
-            this.gridColumn7.Name = "gridColumn7";
+            this.zakoniListBindingSource.DataSource = typeof(Library.ZakoniList);
             // 
             // Prihod
             // 
@@ -979,6 +991,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemProizvod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemOpcenito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemNaplata)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zakoniListBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1053,5 +1066,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit2;
         private System.Windows.Forms.BindingSource uslugaProizvodListBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private System.Windows.Forms.BindingSource zakoniListBindingSource;
     }
 }
