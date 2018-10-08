@@ -16,6 +16,7 @@ namespace Library
 
         public int Id { get; set; }
         public string Naziv { get; set; }
+        public string Kategorija { get; set; }
 
         #endregion
 
@@ -28,7 +29,7 @@ namespace Library
                 using (SQLiteCommand cm = cn.CreateCommand())
                 {
                     cm.CommandType = CommandType.Text;
-                    cm.CommandText = String.Format("SELECT Id FROM Proizvodi WHERE Naziv='{0}';", naziv);
+                    cm.CommandText = String.Format("SELECT Id FROM UslugeProizvodi WHERE Naziv='{0}';", naziv);
                     object res = cm.ExecuteScalar();
                     if (res != null && !(res is DBNull))
                         rez = cm.ExecuteScalar().ToString();
@@ -58,6 +59,7 @@ namespace Library
         {
             Id = dr.GetInt32("Id");
             Naziv = dr.GetString("Naziv");
+            Kategorija = dr.GetString("Kategorija");
         }
 
         #endregion
@@ -98,7 +100,7 @@ namespace Library
         {
             using (SQLiteCommand cm = cn.CreateCommand())
             {
-                cm.CommandText = String.Format("SELECT * FROM Proizvodi WHERE Id={0}", (int)criteria);
+                cm.CommandText = String.Format("SELECT * FROM UslugeProizvodi WHERE Id={0}", (int)criteria);
                 cm.CommandType = CommandType.Text;
                 using (Helpers.SafeDataReader dr = new Helpers.SafeDataReader(cm.ExecuteReader()))
                 {
@@ -115,10 +117,12 @@ namespace Library
             using (SQLiteCommand cm = cn.CreateCommand())
             {
                 cm.CommandType = CommandType.Text;
-                cm.CommandText = @"INSERT INTO Proizvodi (
-								Naziv
+                cm.CommandText = @"INSERT INTO UslugeProizvodi (
+								Naziv,
+                                Kategorija
 							) VALUES (
-								@Naziv
+								@Naziv,
+                                @Kategorija
 							);";
 
                 AddParameters(cm);
@@ -133,8 +137,8 @@ namespace Library
             {
                 cm.CommandType = CommandType.Text;
                 cm.CommandText = @"UPDATE Proizvodi SET
-								Naziv@Naziv WHERE Id=@Id;";
-
+								Naziv=@Naziv,
+                                Kategorija=@Kategorija WHERE Id=@Id;";
                 AddParameters(cm);
                 cm.Prepare();
                 cm.ExecuteNonQuery();
@@ -146,7 +150,7 @@ namespace Library
             using (SQLiteCommand cm = cn.CreateCommand())
             {
                 cm.CommandType = CommandType.Text;
-                cm.CommandText = string.Format(@"DELETE FROM Proizvodi WHERE Id={0};", (int)criteria);
+                cm.CommandText = string.Format(@"DELETE FROM UslugeProizvodi WHERE Id={0};", (int)criteria);
 
                 AddParameters(cm);
                 cm.Prepare();
@@ -162,6 +166,9 @@ namespace Library
 
             cm.Parameters.Add("@Naziv", DbType.String, 512);
             cm.Parameters["@Naziv"].Value = Naziv;
+
+            cm.Parameters.Add("@Kategorija", DbType.String, 512);
+            cm.Parameters["@Kategorija"].Value = "Proizvod";
         }
 
         #endregion
@@ -214,7 +221,7 @@ namespace Library
             {
 
                 cm.CommandType = CommandType.Text;
-                cm.CommandText = "SELECT * FROM Proizvodi";
+                cm.CommandText = "SELECT * FROM UslugeProizvodi";
                 if (criteria != null)
                 {
                     cm.CommandText += " WHERE " + criteria;

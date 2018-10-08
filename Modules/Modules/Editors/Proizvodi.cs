@@ -15,6 +15,7 @@ namespace Modules.Editors
         public Proizvodi()
         {
             InitializeComponent();
+
         }
 
         public Proizvodi(int id)
@@ -25,7 +26,7 @@ namespace Modules.Editors
 
         private void LoadData(int id)
         {
-            ProizvodiBindingSource.DataSource = new Library.Usluge().GetData(id);
+            ProizvodiBindingSource.DataSource = new Library.Proizvodi().GetData(id);
         }
 
         private void btnSave_Click(object sender, EventArgs e)

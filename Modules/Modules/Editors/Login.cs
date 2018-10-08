@@ -83,11 +83,7 @@ namespace Modules.Editors
                 sqlite_cmd.ExecuteNonQuery();
 
                 //Tablica usluga
-                sqlite_cmd.CommandText = "CREATE TABLE Usluge (Id INTEGER PRIMARY KEY, Naziv VARCHAR(512));";
-                sqlite_cmd.ExecuteNonQuery();
-
-                //Tablica Proizvoda
-                sqlite_cmd.CommandText = "CREATE TABLE Proizvodi (Id INTEGER PRIMARY KEY, Naziv VARCHAR(512));";
+                sqlite_cmd.CommandText = "CREATE TABLE UslugeProizvodi (Id INTEGER PRIMARY KEY, Naziv VARCHAR(512), Kategorija VARCHAR(512));";
                 sqlite_cmd.ExecuteNonQuery();
 
                 //Tablica jedinica mjere

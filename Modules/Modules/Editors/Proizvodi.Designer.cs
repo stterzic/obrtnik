@@ -140,7 +140,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "Proizvodi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Usluge";
+            this.Text = "Proizvodi";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtNaziv.Properties)).EndInit();

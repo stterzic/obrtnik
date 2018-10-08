@@ -21,7 +21,7 @@ namespace Modules
 
         public void LoadData()
         {
-            UslugeListBindingSource.DataSource = new Library.UslugeList().GetData(null);
+            UslugeListBindingSource.DataSource = new Library.UslugeList().GetData("Kategorija='Usluge'");
         }
 
         private void gridControl1_DoubleClick(object sender, EventArgs e)

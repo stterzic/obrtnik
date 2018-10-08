@@ -60,6 +60,7 @@
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.uslugeListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.MjerneJediniceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -131,6 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.uslugaProizvodListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uslugeListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MjerneJediniceListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
@@ -183,7 +185,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1102, 245, 310, 350);
             this.layoutControl1.Root = this.layoutControlGroupRoot;
-            this.layoutControl1.Size = new System.Drawing.Size(829, 739);
+            this.layoutControl1.Size = new System.Drawing.Size(829, 823);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -196,7 +198,7 @@
             this.layoutControl6.Controls.Add(this.txtVirmanski);
             this.layoutControl6.Controls.Add(this.txtGotovina);
             this.layoutControl6.Controls.Add(this.dateEditNadnevakUplate);
-            this.layoutControl6.Location = new System.Drawing.Point(416, 497);
+            this.layoutControl6.Location = new System.Drawing.Point(416, 581);
             this.layoutControl6.Name = "layoutControl6";
             this.layoutControl6.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1066, 318, 250, 350);
             this.layoutControl6.Root = this.layoutControlGroup4;
@@ -383,7 +385,7 @@
             // layoutControl5
             // 
             this.layoutControl5.Controls.Add(this.lookUpEditNapomena);
-            this.layoutControl5.Location = new System.Drawing.Point(12, 497);
+            this.layoutControl5.Location = new System.Drawing.Point(12, 581);
             this.layoutControl5.Name = "layoutControl5";
             this.layoutControl5.Root = this.layoutControlGroup1;
             this.layoutControl5.Size = new System.Drawing.Size(400, 230);
@@ -429,7 +431,7 @@
             this.layoutControl4.Name = "layoutControl4";
             this.layoutControl4.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(901, 271, 250, 350);
             this.layoutControl4.Root = this.layoutControlGroup3;
-            this.layoutControl4.Size = new System.Drawing.Size(794, 165);
+            this.layoutControl4.Size = new System.Drawing.Size(805, 249);
             this.layoutControl4.TabIndex = 14;
             this.layoutControl4.Text = "layoutControl4";
             // 
@@ -456,7 +458,7 @@
             this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit1,
             this.repositoryItemLookUpEdit2});
-            this.gridControl2.Size = new System.Drawing.Size(770, 141);
+            this.gridControl2.Size = new System.Drawing.Size(781, 225);
             this.gridControl2.TabIndex = 11;
             this.gridControl2.UseEmbeddedNavigator = true;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -482,6 +484,7 @@
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsDetail.AllowExpandEmptyDetails = true;
             this.gridView2.OptionsDetail.SmartDetailHeight = true;
+            this.gridView2.OptionsView.ShowFooter = true;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             this.gridView2.OptionsView.ShowPreview = true;
             this.gridView2.ViewCaption = "Lista mjernih jedinica";
@@ -509,12 +512,17 @@
             this.repositoryItemLookUpEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemLookUpEdit2.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Value", "Naziv")});
-            this.repositoryItemLookUpEdit2.DataSource = this.uslugaProizvodListBindingSource;
-            this.repositoryItemLookUpEdit2.DisplayMember = "UslugaIliProizvod";
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Naziv", "Naziv"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Kategorija", "Kategorija")});
+            this.repositoryItemLookUpEdit2.DataSource = this.uslugeListBindingSource;
+            this.repositoryItemLookUpEdit2.DisplayMember = "Naziv";
             this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
             this.repositoryItemLookUpEdit2.NullText = "";
-            this.repositoryItemLookUpEdit2.ValueMember = "UslugaIliProizvod";
+            this.repositoryItemLookUpEdit2.ValueMember = "Naziv";
+            // 
+            // uslugeListBindingSource
+            // 
+            this.uslugeListBindingSource.DataSource = typeof(Library.UslugeList);
             // 
             // gridColumn2
             // 
@@ -523,7 +531,7 @@
             this.gridColumn2.FieldName = "JedinicaMjere";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 4;
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -548,7 +556,7 @@
             this.gridColumn3.FieldName = "Kolicina";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.VisibleIndex = 1;
             // 
             // gridColumn4
             // 
@@ -556,7 +564,7 @@
             this.gridColumn4.FieldName = "Cijena";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.VisibleIndex = 2;
             // 
             // gridColumn5
             // 
@@ -564,6 +572,8 @@
             this.gridColumn5.FieldName = "Iznos";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
+            this.gridColumn5.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Iznos", "Ukupno:{0:0.##}")});
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 5;
             // 
@@ -573,7 +583,7 @@
             this.gridColumn6.FieldName = "Rabat";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 4;
+            this.gridColumn6.VisibleIndex = 3;
             // 
             // gridColumn7
             // 
@@ -588,7 +598,7 @@
             this.layoutControlItem10});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "Root";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(794, 165);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(805, 249);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlItem10
@@ -596,7 +606,7 @@
             this.layoutControlItem10.Control = this.gridControl2;
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(774, 145);
+            this.layoutControlItem10.Size = new System.Drawing.Size(785, 229);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
@@ -841,7 +851,7 @@
             this.layoutControlItemNaplata});
             this.layoutControlGroupRoot.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroupRoot.Name = "Root";
-            this.layoutControlGroupRoot.Size = new System.Drawing.Size(829, 739);
+            this.layoutControlGroupRoot.Size = new System.Drawing.Size(829, 823);
             this.layoutControlGroupRoot.TextVisible = false;
             // 
             // layoutControlItemKupac
@@ -878,10 +888,9 @@
             // 
             this.layoutControlItemProizvod.Control = this.layoutControl4;
             this.layoutControlItemProizvod.Location = new System.Drawing.Point(0, 284);
-            this.layoutControlItemProizvod.MaxSize = new System.Drawing.Size(798, 185);
-            this.layoutControlItemProizvod.MinSize = new System.Drawing.Size(798, 185);
+            this.layoutControlItemProizvod.MinSize = new System.Drawing.Size(128, 64);
             this.layoutControlItemProizvod.Name = "layoutControlItemProizvod";
-            this.layoutControlItemProizvod.Size = new System.Drawing.Size(809, 185);
+            this.layoutControlItemProizvod.Size = new System.Drawing.Size(809, 269);
             this.layoutControlItemProizvod.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItemProizvod.Text = "Proizvod/Usluga";
             this.layoutControlItemProizvod.TextLocation = DevExpress.Utils.Locations.Top;
@@ -890,9 +899,12 @@
             // layoutControlItemOpcenito
             // 
             this.layoutControlItemOpcenito.Control = this.layoutControl5;
-            this.layoutControlItemOpcenito.Location = new System.Drawing.Point(0, 469);
+            this.layoutControlItemOpcenito.Location = new System.Drawing.Point(0, 553);
+            this.layoutControlItemOpcenito.MaxSize = new System.Drawing.Size(404, 250);
+            this.layoutControlItemOpcenito.MinSize = new System.Drawing.Size(404, 250);
             this.layoutControlItemOpcenito.Name = "layoutControlItemOpcenito";
             this.layoutControlItemOpcenito.Size = new System.Drawing.Size(404, 250);
+            this.layoutControlItemOpcenito.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItemOpcenito.Text = "Općenito";
             this.layoutControlItemOpcenito.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItemOpcenito.TextSize = new System.Drawing.Size(77, 13);
@@ -900,9 +912,12 @@
             // layoutControlItemNaplata
             // 
             this.layoutControlItemNaplata.Control = this.layoutControl6;
-            this.layoutControlItemNaplata.Location = new System.Drawing.Point(404, 469);
+            this.layoutControlItemNaplata.Location = new System.Drawing.Point(404, 553);
+            this.layoutControlItemNaplata.MaxSize = new System.Drawing.Size(405, 250);
+            this.layoutControlItemNaplata.MinSize = new System.Drawing.Size(405, 250);
             this.layoutControlItemNaplata.Name = "layoutControlItemNaplata";
             this.layoutControlItemNaplata.Size = new System.Drawing.Size(405, 250);
+            this.layoutControlItemNaplata.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItemNaplata.Text = "Naplata";
             this.layoutControlItemNaplata.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItemNaplata.TextSize = new System.Drawing.Size(77, 13);
@@ -916,7 +931,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(829, 739);
+            this.ClientSize = new System.Drawing.Size(829, 823);
             this.Controls.Add(this.layoutControl1);
             this.Name = "Prihod";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -954,6 +969,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.uslugaProizvodListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uslugeListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MjerneJediniceListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
@@ -1067,5 +1083,6 @@
         private System.Windows.Forms.BindingSource uslugaProizvodListBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private System.Windows.Forms.BindingSource zakoniListBindingSource;
+        private System.Windows.Forms.BindingSource uslugeListBindingSource;
     }
 }

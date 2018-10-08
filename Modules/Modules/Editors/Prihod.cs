@@ -20,13 +20,13 @@ namespace Modules.Editors
             LoadData();
             maxId = new Library.Prihodi().GetMaxId();
             txtRacunBroj.Text = (maxId+1).ToString();
-
         }
 
         public void LoadData()
         {            
             MjerneJediniceListBindingSource.DataSource = new Library.MjerneJediniceList().GetData(null);
             zakoniListBindingSource.DataSource = new Library.ZakoniList().GetData(null);
+            uslugeListBindingSource.DataSource = new Library.UslugeList().GetData(null);
         }
 
         public Prihod(int id)
@@ -120,17 +120,7 @@ namespace Modules.Editors
         {
             if (e.Button.ButtonType == NavigatorButtonType.Append)
             {
-                Dictionary<string, string> collection = new Dictionary<string, string>();
-                foreach (Library.Usluge item in new Library.UslugeList().GetData(null))
-                {
-                    collection.Add(item.Naziv, "Usluge");
-                }
-                foreach (Library.Proizvodi item in new Library.ProizvodiList().GetData(null))
-                {
-                    collection.Add(item.Naziv, "Proizvodi");
-                }
-
-                repositoryItemLookUpEdit2.DataSource = collection;
+                
             }
             else if (e.Button.ButtonType == NavigatorButtonType.Remove)
             {
