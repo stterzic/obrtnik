@@ -51,7 +51,7 @@ namespace Library
 
         #region GetData
 
-        public void GetData(object criteria)
+        public Obrt GetData(object criteria)
         {
             using (SQLiteConnection cn = new SQLiteConnection(Helpers.SqLite.DBConnectionString))
             {
@@ -59,6 +59,7 @@ namespace Library
                 ExecuteFetch(cn, criteria);
                 cn.Close();
             }
+            return this;
         }
 
         public void GetDataReader(Helpers.SafeDataReader dr)

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    public partial class Prihodi
+    public class Prihodi
     {
         #region Public Properties
 

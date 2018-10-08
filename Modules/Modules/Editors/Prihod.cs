@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace Modules.Editors
     public partial class Prihod : Form
     {
         int maxId;
+        Library.Prihodi Header = new Library.Prihodi();
+
         public Prihod()
         {
             InitializeComponent();
@@ -36,7 +39,8 @@ namespace Modules.Editors
         }
         public void LoadData(int id)
         {
-            PrihodiBindingSource.DataSource = new Library.Prihodi().GetData(id);
+            Header = new Library.Prihodi().GetData(id);
+            PrihodiBindingSource.DataSource = Header;
             txtRacunBroj.Text = id.ToString();
             uslugaProizvodListBindingSource.DataSource = new Library.UslugaProizvodList().GetData("RacunId=" + id);
             LoadData();
@@ -109,6 +113,7 @@ namespace Modules.Editors
                         uslugaProizvod.InsertData();
                     }
                 }
+                Header = prihodi;
             }
             catch (Exception ex)
             {
@@ -152,6 +157,12 @@ namespace Modules.Editors
 
             gridView2.SetFocusedRowCellValue("Iznos", iznos);
 
+        }
+
+        private void btnIspis_Click(object sender, EventArgs e)
+        {
+            XtraReport tempReport = Reports.Utils.Racun.ShowRacun(Header.Id);
+            tempReport.ShowRibbonPreviewDialog();
         }
     }
 }

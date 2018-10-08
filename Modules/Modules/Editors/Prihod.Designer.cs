@@ -99,6 +99,10 @@
             this.layoutControlItemOpcenito = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItemNaplata = new DevExpress.XtraLayout.LayoutControlItem();
             this.zakoniListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnIspis = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl6)).BeginInit();
@@ -171,6 +175,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemOpcenito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemNaplata)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zakoniListBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -384,9 +391,11 @@
             // 
             // layoutControl5
             // 
+            this.layoutControl5.Controls.Add(this.btnIspis);
             this.layoutControl5.Controls.Add(this.lookUpEditNapomena);
             this.layoutControl5.Location = new System.Drawing.Point(12, 581);
             this.layoutControl5.Name = "layoutControl5";
+            this.layoutControl5.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(672, 344, 250, 350);
             this.layoutControl5.Root = this.layoutControlGroup1;
             this.layoutControl5.Size = new System.Drawing.Size(400, 230);
             this.layoutControl5.TabIndex = 15;
@@ -409,9 +418,12 @@
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.layoutControlItem9,
+            this.emptySpaceItem4,
+            this.emptySpaceItem5});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(400, 230);
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -420,7 +432,7 @@
             this.layoutControlItem1.Control = this.lookUpEditNapomena;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(380, 210);
+            this.layoutControlItem1.Size = new System.Drawing.Size(380, 24);
             this.layoutControlItem1.Text = "Napomena:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(55, 13);
             // 
@@ -926,6 +938,41 @@
             // 
             this.zakoniListBindingSource.DataSource = typeof(Library.ZakoniList);
             // 
+            // btnIspis
+            // 
+            this.btnIspis.Location = new System.Drawing.Point(12, 196);
+            this.btnIspis.Name = "btnIspis";
+            this.btnIspis.Size = new System.Drawing.Size(186, 22);
+            this.btnIspis.StyleController = this.layoutControl5;
+            this.btnIspis.TabIndex = 5;
+            this.btnIspis.Text = "Ispis";
+            this.btnIspis.Click += new System.EventHandler(this.btnIspis_Click);
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.btnIspis;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 184);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(190, 26);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem9.TextVisible = false;
+            // 
+            // emptySpaceItem4
+            // 
+            this.emptySpaceItem4.AllowHotTrack = false;
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 24);
+            this.emptySpaceItem4.Name = "emptySpaceItem4";
+            this.emptySpaceItem4.Size = new System.Drawing.Size(380, 160);
+            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem5
+            // 
+            this.emptySpaceItem5.AllowHotTrack = false;
+            this.emptySpaceItem5.Location = new System.Drawing.Point(190, 184);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(190, 26);
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // Prihod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1008,6 +1055,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemOpcenito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItemNaplata)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zakoniListBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1084,5 +1134,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private System.Windows.Forms.BindingSource zakoniListBindingSource;
         private System.Windows.Forms.BindingSource uslugeListBindingSource;
+        private DevExpress.XtraEditors.SimpleButton btnIspis;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
     }
 }
