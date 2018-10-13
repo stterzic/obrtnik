@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using DevExpress.XtraSplashScreen;
 using Finisar.SQLite;
 using Modules.Editors;
@@ -76,6 +77,10 @@ namespace Obrtnik
                 case "Napomena":
                     Modules.Zakoni_Lista zakoniLista = new Modules.Zakoni_Lista();
                     ShowForm(ListType, zakoniLista, "Lista Zakona");
+                    break;
+                case "KvartaliRacun":
+                    XtraReport tempReport = Reports.Utils.IzvjesceOpausalnomDohodku.ShowIzvjesceOpausalnomDohodku();
+
                     break;
                 default:
                     break;
@@ -161,6 +166,11 @@ namespace Obrtnik
         private void btnNapomena_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             MainOperator("Napomena");
+        }
+
+        private void btnKvartaliRacun_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MainOperator("KvartaliRacun");
         }
     }    
 }
