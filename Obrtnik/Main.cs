@@ -78,10 +78,6 @@ namespace Obrtnik
                     Modules.Zakoni_Lista zakoniLista = new Modules.Zakoni_Lista();
                     ShowForm(ListType, zakoniLista, "Lista Zakona");
                     break;
-                case "KvartaliRacun":
-                    XtraReport tempReport = Reports.Utils.IzvjesceOpausalnomDohodku.ShowIzvjesceOpausalnomDohodku();
-
-                    break;
                 default:
                     break;
             }

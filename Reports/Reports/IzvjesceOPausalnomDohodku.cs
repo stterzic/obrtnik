@@ -12,6 +12,5 @@ namespace Reports
         {
             InitializeComponent();
         }
-
     }
 }

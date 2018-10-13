@@ -29,15 +29,15 @@ namespace Reports.Utils
             Library.PrihodiList prihodiTreciKvartal = new Library.PrihodiList().GetData("NadnevakIzdavanjaRacuna BETWEEN '" + DateTime.Now.Year + "-07-01 00:00:00' AND '" + DateTime.Now.Year + "-09-30 23:59:59'");
             Library.PrihodiList prihodiCetvrtiKvartal = new Library.PrihodiList().GetData("NadnevakIzdavanjaRacuna BETWEEN '" + DateTime.Now.Year + "-10-01 00:00:00' AND '" + DateTime.Now.Year + "-12-31 23:59:59'");
                        
-            decimal naplaceniPrimitciPrviKvartal=0;
-            foreach(Library.Prihodi item in prihodiPrviKvartal)
+            decimal naplaceniPrimitciPrviKvartal = 0.00M;
+            foreach (Library.Prihodi item in prihodiPrviKvartal)
             {
                 naplaceniPrimitciPrviKvartal = naplaceniPrimitciPrviKvartal + item.IznosNaplacenVirmanski;
             }
             report.xrVirmanskiNaplacenoPrviKvartal.Text = naplaceniPrimitciPrviKvartal.ToString();
             report.xrUkupnoNaplaceniPrviKvartal.Text = naplaceniPrimitciPrviKvartal.ToString();
 
-            decimal naplaceniPrimitciDrugiKvartal = 0;
+            decimal naplaceniPrimitciDrugiKvartal = 0.00M;
             foreach (Library.Prihodi item in prihodiDrugiKvartal)
             {
                 naplaceniPrimitciDrugiKvartal = naplaceniPrimitciDrugiKvartal + item.IznosNaplacenVirmanski;
@@ -45,7 +45,7 @@ namespace Reports.Utils
             report.xrVirmanskiNaplacenoDrugiKvartal.Text = naplaceniPrimitciDrugiKvartal.ToString();
             report.xrUkupnoNaplaceniDrugiKvartal.Text = naplaceniPrimitciDrugiKvartal.ToString();
 
-            decimal naplaceniPrimitciTreciKvartal = 0;
+            decimal naplaceniPrimitciTreciKvartal = 0.00M;
             foreach (Library.Prihodi item in prihodiTreciKvartal)
             {
                 naplaceniPrimitciTreciKvartal = naplaceniPrimitciTreciKvartal + item.IznosNaplacenVirmanski;
@@ -53,7 +53,7 @@ namespace Reports.Utils
             report.xrVirmanskiNaplacenoTreciKvartal.Text = naplaceniPrimitciTreciKvartal.ToString();
             report.xrUkupnoNaplaceniTreciKvartal.Text = naplaceniPrimitciTreciKvartal.ToString();
 
-            decimal naplaceniPrimitciCetvrtiKvartal = 0;
+            decimal naplaceniPrimitciCetvrtiKvartal = 0.00M;
             foreach (Library.Prihodi item in prihodiCetvrtiKvartal)
             {
                 naplaceniPrimitciCetvrtiKvartal = naplaceniPrimitciCetvrtiKvartal + item.IznosNaplacenVirmanski;
@@ -64,7 +64,7 @@ namespace Reports.Utils
             decimal ukupnoNaplaceno = naplaceniPrimitciPrviKvartal + naplaceniPrimitciDrugiKvartal + naplaceniPrimitciTreciKvartal + naplaceniPrimitciCetvrtiKvartal;
             report.xrVirmanskiNaplacenoUkupno.Text = naplaceniPrimitciCetvrtiKvartal.ToString();
             report.xrUkupnoNaplaceniUkupno.Text = naplaceniPrimitciCetvrtiKvartal.ToString();
-            
+
             return report;
         }
     }

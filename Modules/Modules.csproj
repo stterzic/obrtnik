@@ -60,7 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Modules\Editors\Login.cs">
       <SubType>Form</SubType>
     </Compile>
