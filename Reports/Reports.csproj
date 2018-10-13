@@ -61,6 +61,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Reports\IzvjesceOPausalnomDohodku.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\IzvjesceOPausalnomDohodku.Designer.cs">
+      <DependentUpon>IzvjesceOPausalnomDohodku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\KnjigaPrometa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\KnjigaPrometa.Designer.cs">
+      <DependentUpon>KnjigaPrometa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Racun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\Racun.cs">
@@ -72,6 +84,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\IzvjesceOPausalnomDohodku.resx">
+      <DependentUpon>IzvjesceOPausalnomDohodku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\KnjigaPrometa.resx">
+      <DependentUpon>KnjigaPrometa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Racun.resx">
       <DependentUpon>Racun.cs</DependentUpon>
     </EmbeddedResource>
