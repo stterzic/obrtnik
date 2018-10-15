@@ -74,6 +74,7 @@
       <DependentUpon>KnjigaPrometa.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\IzvjesceOpausalnomDohodku.cs" />
+    <Compile Include="Utils\KnjigaPrometa.cs" />
     <Compile Include="Utils\Racun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\Racun.cs">

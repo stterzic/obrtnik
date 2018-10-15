@@ -19,7 +19,7 @@ namespace Library
         public string Adresa { get; set; }
         public string Mjesto { get; set; }
         public string OibKupca { get; set; }
-        public DateTime NadnevakIzdavanjaRacuna { get; set; }
+        public string NadnevakIzdavanjaRacuna { get; set; }
         public DateTime DatumPredvideneIsporuke { get; set; }
         public DateTime VrijemeIzrade { get; set; }
         public DateTime DospijecePlacanja { get; set; }
@@ -34,6 +34,7 @@ namespace Library
         public decimal IznosNaplacenVirmanski { get; set; }
         public int BrojIzvodaUplatnice { get; set; }
         public DateTime NadnevakDatumUplate { get; set; }
+        public decimal Ukupno { get; set; }
 
         #endregion
 
@@ -77,7 +78,7 @@ namespace Library
             Adresa = dr.GetString("Adresa");
             Mjesto = dr.GetString("Mjesto");
             OibKupca = dr.GetString("OibKupca");
-            NadnevakIzdavanjaRacuna = dr.GetDateTime("NadnevakIzdavanjaRacuna");
+            NadnevakIzdavanjaRacuna = dr.GetDateTime("NadnevakIzdavanjaRacuna").ToString("dd-MM-yyyy");
             DatumPredvideneIsporuke = dr.GetDateTime("DatumPredvideneIsporuke");
             VrijemeIzrade = dr.GetDateTime("VrijemeIzrade");
             DospijecePlacanja = dr.GetDateTime("DospijecePlacanja");
@@ -86,6 +87,7 @@ namespace Library
             IznosNaplacenVirmanski = dr.GetDecimal("IznosNaplacenVirmanski");
             BrojIzvodaUplatnice = dr.GetInt32("BrojIzvodaUplatnice");
             NadnevakDatumUplate = dr.GetDateTime("NadnevakDatumUplate");
+            Ukupno = IznosNaplacenGotovinom + IznosNaplacenVirmanski;
         }
 
         #endregion

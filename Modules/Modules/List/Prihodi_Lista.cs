@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 
 namespace Modules
 {
@@ -58,6 +59,18 @@ namespace Modules
         private void gridControl1_MouseMove(object sender, MouseEventArgs e)
         {
             LoadData();
+        }
+
+        private void btnKpr_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraReport tempReport = Reports.Utils.KnjigaPrometa.ShowKnjigaPrometa();
+            tempReport.ShowRibbonPreviewDialog();
+        }
+
+        private void btnPoSd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraReport tempReport = Reports.Utils.IzvjesceOpausalnomDohodku.ShowIzvjesceOpausalnomDohodku();
+            tempReport.ShowRibbonPreviewDialog();
         }
     }
 }

@@ -77,7 +77,7 @@
             this.xrTable4 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow13 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell32 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell29 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrUkupnoGotovina = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrUkupnoVirmanski = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrUkupno = new DevExpress.XtraReports.UI.XRTableCell();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
@@ -99,6 +99,7 @@
             this.xrTableCell26 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell27 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell28 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell30 = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
@@ -339,7 +340,7 @@
             this.xrTableCell10.StylePriority.UseTextAlignment = false;
             this.xrTableCell10.Text = "1. NAZIV DJELATNOSTI: ";
             this.xrTableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell10.Weight = 0.73076925424429084D;
+            this.xrTableCell10.Weight = 0.91826939509465144D;
             // 
             // xrNazivDjelatnosti
             // 
@@ -351,7 +352,7 @@
             this.xrNazivDjelatnosti.StylePriority.UsePadding = false;
             this.xrNazivDjelatnosti.StylePriority.UseTextAlignment = false;
             this.xrNazivDjelatnosti.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrNazivDjelatnosti.Weight = 2.269230745755709D;
+            this.xrNazivDjelatnosti.Weight = 2.0817306049053483D;
             // 
             // xrTableRow5
             // 
@@ -497,7 +498,7 @@
             this.xrTableCell25.StylePriority.UseTextAlignment = false;
             this.xrTableCell25.Text = "1. NAZIV: ";
             this.xrTableCell25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell25.Weight = 0.73076925424429084D;
+            this.xrTableCell25.Weight = 0.91826939509465144D;
             // 
             // xrPodaciOPoslovnojJediniciNaziv
             // 
@@ -509,7 +510,7 @@
             this.xrPodaciOPoslovnojJediniciNaziv.StylePriority.UsePadding = false;
             this.xrPodaciOPoslovnojJediniciNaziv.StylePriority.UseTextAlignment = false;
             this.xrPodaciOPoslovnojJediniciNaziv.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrPodaciOPoslovnojJediniciNaziv.Weight = 2.269230745755709D;
+            this.xrPodaciOPoslovnojJediniciNaziv.Weight = 2.0817306049053483D;
             // 
             // xrTableRow10
             // 
@@ -531,7 +532,7 @@
             this.xrTableCell8.StylePriority.UseTextAlignment = false;
             this.xrTableCell8.Text = "2. ADRESA: ";
             this.xrTableCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell8.Weight = 0.73076925424429084D;
+            this.xrTableCell8.Weight = 0.91826939509465144D;
             // 
             // xrPodaciOPoslovnojJediniciAdresa
             // 
@@ -543,7 +544,7 @@
             this.xrPodaciOPoslovnojJediniciAdresa.StylePriority.UsePadding = false;
             this.xrPodaciOPoslovnojJediniciAdresa.StylePriority.UseTextAlignment = false;
             this.xrPodaciOPoslovnojJediniciAdresa.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrPodaciOPoslovnojJediniciAdresa.Weight = 2.269230745755709D;
+            this.xrPodaciOPoslovnojJediniciAdresa.Weight = 2.0817306049053483D;
             // 
             // ReportFooter
             // 
@@ -566,7 +567,8 @@
             // 
             this.xrTableRow13.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell32,
-            this.xrTableCell29,
+            this.xrTableCell30,
+            this.xrUkupnoGotovina,
             this.xrUkupnoVirmanski,
             this.xrUkupno});
             this.xrTableRow13.Dpi = 100F;
@@ -577,31 +579,46 @@
             // 
             // xrTableCell32
             // 
+            this.xrTableCell32.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTableCell32.Dpi = 100F;
             this.xrTableCell32.Name = "xrTableCell32";
+            this.xrTableCell32.StylePriority.UseBorders = false;
             this.xrTableCell32.StylePriority.UseTextAlignment = false;
             this.xrTableCell32.Text = "UKUPNO";
             this.xrTableCell32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell32.Weight = 0.65764236583590452D;
             // 
-            // xrTableCell29
+            // xrUkupnoGotovina
             // 
-            this.xrTableCell29.Dpi = 100F;
-            this.xrTableCell29.Name = "xrTableCell29";
-            this.xrTableCell29.Weight = 1.5291860951079446D;
+            this.xrUkupnoGotovina.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrUkupnoGotovina.Dpi = 100F;
+            this.xrUkupnoGotovina.Name = "xrUkupnoGotovina";
+            this.xrUkupnoGotovina.StylePriority.UseBorders = false;
+            this.xrUkupnoGotovina.StylePriority.UseTextAlignment = false;
+            this.xrUkupnoGotovina.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrUkupnoGotovina.Weight = 0.56072400206308848D;
             // 
             // xrUkupnoVirmanski
             // 
+            this.xrUkupnoVirmanski.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrUkupnoVirmanski.Dpi = 100F;
             this.xrUkupnoVirmanski.Name = "xrUkupnoVirmanski";
+            this.xrUkupnoVirmanski.StylePriority.UseBorders = false;
             this.xrUkupnoVirmanski.StylePriority.UseTextAlignment = false;
             this.xrUkupnoVirmanski.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrUkupnoVirmanski.Weight = 0.41943900815902946D;
             // 
             // xrUkupno
             // 
+            this.xrUkupno.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrUkupno.Dpi = 100F;
             this.xrUkupno.Name = "xrUkupno";
+            this.xrUkupno.StylePriority.UseBorders = false;
             this.xrUkupno.StylePriority.UseTextAlignment = false;
             this.xrUkupno.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrUkupno.Weight = 0.39373284449311319D;
@@ -773,6 +790,15 @@
             this.xrTableCell28.Text = "7(5+6)";
             this.xrTableCell28.Weight = 0.38972345205453729D;
             // 
+            // xrTableCell30
+            // 
+            this.xrTableCell30.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell30.Dpi = 100F;
+            this.xrTableCell30.Name = "xrTableCell30";
+            this.xrTableCell30.StylePriority.UseBorders = false;
+            this.xrTableCell30.Weight = 0.96846209304485609D;
+            // 
             // KnjigaPrometa
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -807,12 +833,6 @@
         private DevExpress.XtraReports.UI.XRTable xrTable3;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow14;
         private DevExpress.XtraReports.UI.XRTableCell xrRedniBroj;
-        private DevExpress.XtraReports.UI.XRTableCell xrNadnevak;
-        private DevExpress.XtraReports.UI.XRTableCell xrBrojIspravePrometa;
-        private DevExpress.XtraReports.UI.XRTableCell xrOpisIspravaOPrimicima;
-        private DevExpress.XtraReports.UI.XRTableCell xrIznosNaplacenUGotovini;
-        private DevExpress.XtraReports.UI.XRTableCell xrIznosNaplacenVirmanski;
-        private DevExpress.XtraReports.UI.XRTableCell xrIznosUkupno;
         private DevExpress.XtraReports.UI.XRTable xrTable1;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
@@ -826,30 +846,21 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow4;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
-        private DevExpress.XtraReports.UI.XRTableCell xrNazivDjelatnosti;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow5;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell13;
-        private DevExpress.XtraReports.UI.XRTableCell xrImePrezimePoduzetnika;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow6;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell16;
-        private DevExpress.XtraReports.UI.XRTableCell xrAdresaPrebivalistaBoravista;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow7;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell19;
-        private DevExpress.XtraReports.UI.XRTableCell xrOibPoduzetnika;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow8;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell22;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow9;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell25;
-        private DevExpress.XtraReports.UI.XRTableCell xrPodaciOPoslovnojJediniciNaziv;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow10;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;
-        private DevExpress.XtraReports.UI.XRTableCell xrPodaciOPoslovnojJediniciAdresa;
         private DevExpress.XtraReports.UI.XRTable xrTable4;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow13;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell32;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell29;
-        private DevExpress.XtraReports.UI.XRTableCell xrUkupnoVirmanski;
-        private DevExpress.XtraReports.UI.XRTableCell xrUkupno;
         private DevExpress.XtraReports.UI.XRTable xrTable2;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow11;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
@@ -867,5 +878,21 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell26;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell27;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell28;
+        public DevExpress.XtraReports.UI.XRTableCell xrNazivDjelatnosti;
+        public DevExpress.XtraReports.UI.XRTableCell xrImePrezimePoduzetnika;
+        public DevExpress.XtraReports.UI.XRTableCell xrAdresaPrebivalistaBoravista;
+        public DevExpress.XtraReports.UI.XRTableCell xrOibPoduzetnika;
+        public DevExpress.XtraReports.UI.XRTableCell xrPodaciOPoslovnojJediniciNaziv;
+        public DevExpress.XtraReports.UI.XRTableCell xrPodaciOPoslovnojJediniciAdresa;
+        public DevExpress.XtraReports.UI.XRTableCell xrNadnevak;
+        public DevExpress.XtraReports.UI.XRTableCell xrBrojIspravePrometa;
+        public DevExpress.XtraReports.UI.XRTableCell xrOpisIspravaOPrimicima;
+        public DevExpress.XtraReports.UI.XRTableCell xrIznosNaplacenUGotovini;
+        public DevExpress.XtraReports.UI.XRTableCell xrIznosNaplacenVirmanski;
+        public DevExpress.XtraReports.UI.XRTableCell xrIznosUkupno;
+        public DevExpress.XtraReports.UI.XRTableCell xrUkupno;
+        public DevExpress.XtraReports.UI.XRTableCell xrUkupnoVirmanski;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell30;
+        public DevExpress.XtraReports.UI.XRTableCell xrUkupnoGotovina;
     }
 }

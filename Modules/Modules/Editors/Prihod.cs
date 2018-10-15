@@ -62,7 +62,7 @@ namespace Modules.Editors
                 prihodi.KupacNaziv = txtKupacNaziv.Text;
                 prihodi.Mjesto = txtMjesto.Text;
                 prihodi.NadnevakDatumUplate = Convert.ToDateTime(dateEditNadnevakUplate.Text);
-                prihodi.NadnevakIzdavanjaRacuna = Convert.ToDateTime(dateEditNadnevak.Text);
+                prihodi.NadnevakIzdavanjaRacuna = dateEditNadnevak.Text;
                 prihodi.Napomena = lookUpEditNapomena.Text;
                 prihodi.OibKupca = txtOibKupca.Text;
                 prihodi.VrijemeIzrade = Convert.ToDateTime(dateEditVrijemeIzrade.Text);
